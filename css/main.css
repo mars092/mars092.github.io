@@ -53,6 +53,10 @@ body {
 .container:after, .row:after {
 	clear: both;
 }
+.row {
+	padding-left: 15px;
+	padding-right: 15px;
+}
 .container {
 	max-width: 1500px;
 	margin: 0 auto;
@@ -76,9 +80,10 @@ body {
 	background-position: 50% 0;
 	-webkit-background-size: cover;
 	background-size: cover;
-	height: 1027px;
+	height: 1028px;
 }
 .body_bg {
+	position: relative;
 	background-color: #fff;
 	padding-bottom: 40px;
 }
@@ -182,6 +187,11 @@ body {
 	line-height: 21px;
 	cursor: pointer;
 	margin-top: 15px;
+	transition: 0.5s;
+}
+.feedback > form > button:hover {
+	background-color: #59158c;
+	transition: 0.5s;
 }
 #small-dialog {
 	max-width: 513px;
@@ -243,8 +253,6 @@ body {
 .my-mfp-zoom-in.mfp-removing.mfp-bg {
 	opacity: 0;
 }
-
-
 
 /*** Fade-move animation for second dialog*/
 
@@ -331,6 +339,11 @@ body {
 	position: relative;
 	top: 22px;
 	margin-left: 10px;
+	transition: 0.5s;
+}
+.vk_link > a:hover {
+	transition: 0.5s;
+	opacity: 0.8;
 }
 .header {
 	color: #505050;
@@ -401,7 +414,7 @@ body {
 	line-height: 22px;
 }
 .block_vacancies2 {
-	width: 32%;
+	width: 31.9%;
 	float: left;
 	margin-left: 15px;
 }
@@ -477,6 +490,12 @@ body {
 	border: none;
 	outline-style: none;
 	margin-top: 15px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.form_body > button:hover {
+	background-color: #59158c;
+	transition: 0.5s;
 }
 .block_vacancies_indent {
 	margin-left: 33.1%;
@@ -620,42 +639,20 @@ body {
 	float: right;
 	margin: 45px 0;
 }
-.notifications {
-	position: fixed;
-	left: 0;
-	top: 20%;
+.button_top {
+	position: absolute;
+	top: 85%;
+	left: 90%;
 }
-.notifications {
-	font-size: 12px;
-	font-weight: 400;
-	line-height: 30px;
-	text-transform: uppercase;
-}
-.notifications > li {
-	list-style-type: none;
-	transition: 0.5s;
-}
-.notifications > li > a {
-	color: #546e7a;
+.button_top > a {
 	text-decoration: none;
-}
-.notifications > li:hover {
-	font-size: 30px;
+	font-size: 80px;
+	color: #fff;
 	transition: 0.5s;
 }
-.notifications > li > a:hover {
-	color: #000;
-}
-.notifications > li > a > span {
-	color: #C0C0C0;
-}
-.active{
-	font-size: 30px;
-	color: #000;
+.button_top.button_top_toggle > a{
+	color: #6919a6;
 	transition: 0.5s;
-}
-.active > a {
-	color: #000 !important;
 }
 @media only screen and (max-width : 1200px) {
 	#header {

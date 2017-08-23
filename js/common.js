@@ -1,23 +1,5 @@
 $(function() {
 
-	//E-mail Ajax Send
-	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
-
 	//Chrome Smooth Scroll
 	try {
 		$.browserSelector();
@@ -31,6 +13,8 @@ $(function() {
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 	
 });
+
+/*попап*/
 $(document).ready(function() {
 	$('.popup-with-zoom-anim').magnificPopup({
 		type: 'inline',
@@ -48,12 +32,14 @@ $(document).ready(function() {
 		mainClass: 'my-mfp-zoom-in'
 	});
 
+	/*спойлеры*/
 	jQuery('.spoiler-text').hide()
 	jQuery('.spoiler').click(function(){
 		jQuery(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle()
 	})
 });
 
+/*паралакс эфект*/
 $(document).ready(function(){
 	// Кешируем объект окна
 	$window = $(window);
@@ -77,50 +63,19 @@ $(document).ready(function(){
 
    });
 
+
 });
 
-/*$(document).ready(function(){
-	var waypoint = new Waypoint({
-		element: document.getElementById('header'),
-		handler: function(direction) {
-			$("#elem1").addClass("active")
-			$("#elem2").removeClass("active")
-			$("#elem3").removeClass("active")
-			$("#elem4").removeClass("active")
-		},
-		offset: -50 
-	})
-	var waypoint = new Waypoint({
-		element: document.getElementById('section2'),
-		handler: function(direction) {
-			$("#elem1").removeClass("active")
-			$("#elem2").addClass("active")
-			$("#elem3").removeClass("active")
-			$("#elem4").removeClass("active")
-		}
-	})
-	var waypoint = new Waypoint({
-		element: document.getElementById('section3'),
-		handler: function(direction) {
-			$("#elem1").removeClass("active")
-			$("#elem2").removeClass("active")
-			$("#elem3").addClass("active")
-			$("#elem4").removeClass("active")
-		}
-	})
+$(document).ready(function(){
 	var waypoint = new Waypoint({
 		element: document.getElementById('section4'),
 		handler: function(direction) {
-			$("#elem1").removeClass("active")
-			$("#elem2").removeClass("active")
-			$("#elem3").removeClass("active")
-			$("#elem4").addClass("active")
+			$(".button_top").toggleClass("button_top_toggle");
 		},
-		offset: 100 
+		offset: 'bottom-in-view'
 	})
-});*/
-/*$(document).ready(function(){
-	$(".notifications").on("click","a", function (event) {
+	
+	$(".button_top").on("click","a", function (event) {
 		//отменяем стандартную обработку нажатия по ссылке
 		event.preventDefault();
 
@@ -133,4 +88,4 @@ $(document).ready(function(){
 		//анимируем переход на расстояние - top за 1500 мс
 		$('body,html').animate({scrollTop: top}, 1500);
 	});
-});*/
+});
