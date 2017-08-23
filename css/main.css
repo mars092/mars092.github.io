@@ -644,19 +644,35 @@ body {
 	position: absolute;
 	top: 85%;
 	left: 90%;
+	width: 80px;
+	height: 80px;
 }
 .button_top > a {
 	text-decoration: none;
-	font-size: 80px;
+	font-size: 50px;
+	text-align: center;
+	line-height: 73px;
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	display: block;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
 	color: #fff;
 	transition: 0.5s;
 }
 .button_top.button_top_toggle > a{
-	color: #6919a6;
+	width: 80px;
+	height: 80px;
+	background-color: #6919a6;
+	box-shadow: 0 0 90.2px 7.8px rgba(0, 0, 0, 0.34);
 	transition: 0.5s;
 }
 .button_top.button_top_toggle > a:hover{
-	color: #59158c;
+	color: #fff;
+	background-color: #59158c;
 	transition: 0.5s;
 }
 @media only screen and (max-width : 1200px) {
