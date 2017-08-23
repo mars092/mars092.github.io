@@ -356,8 +356,9 @@ body {
 	display: block;
 }
 .info_block {
-	width: 33.333333%;
+	width: 30.333333%;
 	float: left;
+	margin-left: 37px;
 }
 .icon_info {
 	width: 87px;
