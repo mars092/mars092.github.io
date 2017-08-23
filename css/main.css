@@ -654,6 +654,10 @@ body {
 	color: #6919a6;
 	transition: 0.5s;
 }
+.button_top.button_top_toggle > a:hover{
+	color: #59158c;
+	transition: 0.5s;
+}
 @media only screen and (max-width : 1200px) {
 	#header {
 		background-position: 50% 0 !important;
