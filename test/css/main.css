@@ -80,3 +80,6 @@ section {
 .container {
 	background-color: #fff;
 }
+.row {
+	border: 3px solid #000;
+}
