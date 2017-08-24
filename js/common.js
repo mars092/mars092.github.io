@@ -65,27 +65,3 @@ $(document).ready(function(){
 
 
 });
-
-$(document).ready(function(){
-	var waypoint = new Waypoint({
-		element: document.getElementById('section4'),
-		handler: function(direction) {
-			$(".button_top").toggleClass("button_top_toggle");
-		},
-		offset: 'bottom-in-view'
-	})
-	
-	$(".button_top").on("click","a", function (event) {
-		//отменяем стандартную обработку нажатия по ссылке
-		event.preventDefault();
-
-		//забираем идентификатор бока с атрибута href
-		var id  = $(this).attr('href'),
-
-		//узнаем высоту от начала страницы до блока на который ссылается якорь
-		top = $(id).offset().top;
-		
-		//анимируем переход на расстояние - top за 1500 мс
-		$('body,html').animate({scrollTop: top}, 1500);
-	});
-});
