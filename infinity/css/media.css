@@ -44,7 +44,7 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 	.question2 {
-		margin-left: 0;
+		margin-left: 40px;
 	}
 }
 @media only screen and (max-width : 1444px) {
@@ -261,4 +261,10 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
+}
+@media only screen and (min-width : 1445px) {
+	.infoblock > h1 > span > span > img {
+		top: 8px;
+		width: 51px;
+	}
 }
