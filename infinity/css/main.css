@@ -682,6 +682,9 @@ body {
 }
 /* css firefox */
 @-moz-document url-prefix(){
+	.infinity_text {
+		font-size: 23px !important;
+	}
 	.header {
 		font-weight: initial;
 	}
