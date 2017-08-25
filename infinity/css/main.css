@@ -38,7 +38,7 @@ body {
 	font-family: sans-serif;
 	font-size: 16px;
 	position: relative;
-	min-width: 320px;
+	min-width: 1280px;
 	line-height: 1.6;
 	font-family: OpenSans, sans-serif;
 }
@@ -98,7 +98,7 @@ body {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, 50%);
+	transform: translate(-116.8%, 127.9%);
 }
 .body_bg {
 	position: relative;
@@ -108,16 +108,8 @@ body {
 	background-size: 100%;
 	padding-bottom: 40px;
 }
-.girls {
-	position: absolute;
-	bottom: -8px;
-}
-.girls > img {
-	max-width: 900px;
-}
 .infoblock {
-	position: relative;
-	max-width: 635px;
+	width: 635px;
 	float: right;
 	text-align: center;
 }
@@ -567,7 +559,7 @@ body {
 	text-decoration: none;
 }
 .indent {
-	max-width: 827px;
+	width: 827px;
 	height: 2px;
 	background-color: #000;
 	opacity: 0.3;
@@ -679,6 +671,12 @@ body {
 .footer_logo {
 	float: right;
 	margin: 45px 0;
+}
+@media only screen and (max-width : 1200px) {
+	#header {
+		background-position: 50% 0 !important;
+		background-attachment: inherit;
+	}
 }
 /* css firefox */
 @-moz-document url-prefix(){
