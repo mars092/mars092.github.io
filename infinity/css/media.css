@@ -1,0 +1,211 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1280px) {
+	.info_block {
+		margin-left: 0;
+		width: 33.333333%;
+	}
+}
+@media only screen and (max-width : 1200px) {
+	#header {
+		background-position: 50% 0 !important;
+		background-attachment: inherit;
+	}
+	.block_vacancies1 {
+		width: 48.89999%;
+	}
+	.block_vacancies2 {
+		width: 48.89999%;
+	}
+	.block_vacancies3 {
+		width: 100%;
+	}
+	.block_vacancies_indent {
+		margin-left: 0;
+	}
+}
+
+@media only screen and (max-width : 1190px) {
+	.question1 {
+		margin-left: 0;
+	}
+}
+
+@media only screen and (max-width : 1024px) {
+	.info_text > h3 {
+		font-size: 24px;
+	}
+	.info_text > p {
+		font-size: 16px;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.question2 {
+		margin-left: 0;
+	}
+}
+@media only screen and (max-width : 900px) {
+	.girls {
+		display: none;
+	}
+	.infoblock {
+		float: none;
+		margin: 0 auto;
+	}
+}
+@media only screen and (max-width : 875px) {
+	.info_block {
+		width: 100%;
+	}
+	.header {
+		font-size: 50px;
+	}
+	.block_vacancies1 {
+		width: 100%;
+	}
+	.block_vacancies2 {
+		width: 100%;
+	}
+}
+@media only screen and (max-width : 830px) {
+	.help_block {
+		margin-left: 0;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.bg_footer {
+		height: auto;
+	}
+}
+@media only screen and (max-width : 700px) {
+	.infoblock > h1 {
+		font-size: 50px;
+	}
+	.infoblock > h1 > span {
+		font-size: 59px;
+	}
+	.infoblock > h1 > span > span {
+		font-size: 72px;
+	}
+	.tel > a {
+		font-size: 72px;
+	}
+}
+@media only screen and (max-width : 600px) {
+	.subtitle{
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.header2 {
+		font-size: 45px;
+	}
+	.tell {
+		font-size: 45px;
+	}
+	.info_kontakt {
+		font-size: 14px;
+	}
+}
+@media only screen and (max-width : 576px) {
+	.infoblock > h1 {
+		font-size: 30px;
+	}
+	.infoblock > h1 > span {
+		font-size: 39px;
+	}
+	.infoblock > h1 > span > span {
+		font-size: 52px;
+	}
+	.tel > a {
+		font-size: 52px;
+	}
+	.popup-with-zoom-anim {
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width : 565px) {
+	.feedback > form {
+		padding: 26px 0 0 0;
+		-webkit-background-size: contain;
+		background-size: contain;
+		    width: 320px;
+    height: 292px;
+	}
+	.feedback > form > span {
+		font-size: 28px;
+		line-height: 29px;
+	}
+	.feedback > form > input {
+		width: 150px;
+		height: 44px;
+	}
+	.feedback > form > button {
+		width: 188px;
+		height: 43px;
+	}
+} 
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.block_vacancies1 > p {
+		font-size: 15px;
+	}
+	.block_vacancies2 > ul > li, .block_vacancies1 > ul > li {
+		font-size: 15px;
+	}
+	.form_body > input {
+		width: 260px;
+	}
+	.question1, .question2 {
+		width: 100%;
+	}
+	.help_block {
+		font-size: 16px;
+		line-height: 18px;
+		width: 100%;
+	}
+	.help_tel {
+		width: 100%;
+		margin-left: 0;
+	}
+	.help_tel > a {
+		font-size: 40px;
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
