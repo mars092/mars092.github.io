@@ -47,6 +47,59 @@
 		margin-left: 0;
 	}
 }
+@media only screen and (max-width : 1444px) {
+	.container {
+		max-width: 980px;
+	}
+	.infoblock > h1 {
+		font-size: 29px;
+		line-height: 38px;
+	}
+	.infoblock > h1 > span {
+		font-size: 39px;
+	}
+	.infoblock > h1 > span > span {
+		font-size: 52px;
+	}
+	.tel > a {
+		font-size: 42px;
+	}
+	.popup-with-zoom-anim {
+		font-size: 17px;
+	}
+	.feedback > form {
+		-webkit-background-size: contain;
+		background-size: contain;
+		padding: 50px 0 0 0;
+		width: 371px;
+		height: 320px;
+	}
+	.feedback > form > span{
+		font-size: 28px;
+		line-height: 28px;
+	}
+	.feedback > form > input {
+		width: 180px;
+		height: 34px;
+		font-size: 22px;
+	}
+	.feedback > form > button {
+		width: 197px;
+		height: 43px;
+	}
+	.bg_fix {
+		height: 741px;
+	}
+	#header {
+		height: 740px;
+	}
+	.girls > img {
+		width: 640px;
+	}
+	.infinity_text {
+		font-size: 24px;
+	}
+}
 @media only screen and (max-width : 900px) {
 	.girls {
 		display: none;
@@ -132,8 +185,8 @@
 		padding: 26px 0 0 0;
 		-webkit-background-size: contain;
 		background-size: contain;
-		    width: 320px;
-    height: 292px;
+		width: 320px;
+		height: 292px;
 	}
 	.feedback > form > span {
 		font-size: 28px;
