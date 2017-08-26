@@ -686,7 +686,7 @@ body {
 	margin: 45px 0;
 }
 /* css firefox */
-@-moz-document url-prefix(){
+/* @-moz-document url-prefix(){ */
 	.infinity_text {
 		font-size: 23px !important;
 	}
@@ -720,4 +720,4 @@ body {
 	.block_vacancies2 > h3 {
 		font-weight: initial;
 	}
-}
+/* } */
