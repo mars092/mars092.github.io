@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?k4y1l6');
+  src:  url('fonts/icomoon.eot?k4y1l6#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?k4y1l6') format('truetype'),
+    url('fonts/icomoon.woff?k4y1l6') format('woff'),
+    url('fonts/icomoon.svg?k4y1l6#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Motorcycles:before {
+  content: "\e900";
+  color: #000;
+}
+.icon-animals:before {
+  content: "\e901";
+  color: #626262;
+}
+.icon-Appliances:before {
+  content: "\e902";
+  color: #626262;
+}
+.icon-aquarium:before {
+  content: "\e903";
+  color: #626262;
+}
+.icon-Audio-and-video:before {
+  content: "\e904";
+  color: #626262;
+}
+.icon-auto:before {
+  content: "\e905";
+  color: #626262;
+}
+.icon-beauty-and-health:before {
+  content: "\e906";
+  color: #626262;
+}
+.icon-birds:before {
+  content: "\e907";
+  color: #626262;
+}
+.icon-cats:before {
+  content: "\e908";
+  color: #626262;
+}
+.icon-consumer-electronics:before {
+  content: "\e909";
+  color: #626262;
+}
+.icon-e-cigarettes:before {
+  content: "\e90a";
+  color: #626262;
+}
+.icon-Furniture-and-interior:before {
+  content: "\e90b";
+  color: #626262;
+}
+.icon-Game-items:before {
+  content: "\e90c";
+  color: #626262;
+}
+.icon-games:before {
+  content: "\e90d";
+  color: #626262;
+}
+.icon-Goods-for-children-and-toys:before {
+  content: "\e90e";
+  color: #626262;
+}
+.icon-Goods-for-pets:before {
+  content: "\e90f";
+  color: #626262;
+}
+.icon-home:before {
+  content: "\e910";
+  color: #626262;
+}
+.icon-hunting-and-fishing:before {
+  content: "\e911";
+  color: #626262;
+}
+.icon-instruments:before {
+  content: "\e912";
+  color: #626262;
+}
+.icon-Laptops:before {
+  content: "\e913";
+  color: #626262;
+}
+.icon-Magazines-and-books:before {
+  content: "\e914";
+  color: #626262;
+}
+.icon-musical-instruments:before {
+  content: "\e915";
+  color: #626262;
+}
+.icon-Office-equipment:before {
+  content: "\e916";
+  color: #626262;
+}
+.icon-other-animals:before {
+  content: "\e917";
+  color: #626262;
+}
+.icon-personal-things:before {
+  content: "\e918";
+  color: #626262;
+}
+.icon-Photography-equipment:before {
+  content: "\e919";
+  color: #626262;
+}
+.icon-plants:before {
+  content: "\e91a";
+  color: #626262;
+}
+.icon-spare-parts:before {
+  content: "\e91b";
+  color: #626262;
+}
+.icon-Sport-recreation:before {
+  content: "\e91c";
+  color: #626262;
+}
+.icon-tablets:before {
+  content: "\e91d";
+  color: #626262;
+}
+.icon-telephones:before {
+  content: "\e91e";
+  color: #626262;
+}
+.icon-Trucks:before {
+  content: "\e91f";
+  color: #626262;
+}
+.icon-Watches-and-jewelery:before {
+  content: "\e920";
+  color: #626262;
+}
+.icon-water-transport:before {
+  content: "\e921";
+  color: #626262;
+}

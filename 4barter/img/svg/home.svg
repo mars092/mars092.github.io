@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67" height="62">
+	<defs>
+		<clipPath id="clip_0">
+			<rect y="-1" width="67" height="63" clip-rule="nonzero"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip_0)">
+		<path fill="rgb(98,98,98)" stroke="none" transform="translate(0 -0.758423)" d="M59.6217 62L59.6217 27.8835L67 27.8835L33.5 0L15.5926 14.9034L15.5926 0.161855L13.9679 0.161855L13.9679 16.2553L0 27.8835L7.44532 27.8835L7.44532 62L22.1151 62L22.1151 41.0033L44.9401 41.0033L44.9401 62L59.6217 62Z" fill-rule="evenodd"/>
+	</g>
+	<defs>
+		<clipPath id="clip_1">
+			<rect x="-2" y="-3" width="71" height="67" clip-rule="nonzero"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip_1)">
+		<path fill="none" stroke="rgb(213,213,213)" stroke-width="1" stroke-miterlimit="4" transform="translate(0 -0.758423)" d="M59.6217 62L59.6217 27.8835L67 27.8835L33.5 0L15.5926 14.9034L15.5926 0.161855L13.9679 0.161855L13.9679 16.2553L0 27.8835L7.44532 27.8835L7.44532 62L22.1151 62L22.1151 41.0033L44.9401 41.0033L44.9401 62L59.6217 62Z" fill-rule="evenodd"/>
+	</g>
+</svg>
