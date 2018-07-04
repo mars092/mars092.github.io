@@ -1,0 +1,18 @@
+@font-face {
+	font-family: "ProximaNova";
+	src: url("../fonts/ProximaNova/ProximaNova-Regular.eot");
+	src: url("../fonts/ProximaNova/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/ProximaNova/ProximaNova-Regular.woff") format("woff"),
+			 url("../fonts/ProximaNova/ProximaNova-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "Candara";
+	src: url("../fonts/Candara/Candarab.eot");
+	src: url("../fonts/Candara/Candarab.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/Candara/Candarab.woff") format("woff"),
+			 url("../fonts/Candara/Candarab.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}

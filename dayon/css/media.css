@@ -1,0 +1,195 @@
+/*==========  Desktop First Method  ==========*/
+@media only screen and (max-width : 1919px) {
+	.bg-section3 {
+		height: auto;
+	}
+}
+@media only screen and (max-width : 1680px) {
+	.calc-block > h3 {
+		font-size: 30px;
+	}
+	.attribute {
+		font-size: 25px;
+	}
+	.calc-block label {
+		font-size: 18px;
+	}
+	.characteristics {
+		font-size: 18px;
+	}
+	.calc-block label {
+		margin-right: 5px;
+	}
+	.item-product > button {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width : 1400px) {
+	.calc-block > h3 {
+		font-size: 24px;
+		line-height: 28px;
+	}
+	.attribute {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.calc-block label {
+		line-height: 22px;
+	}
+	.characteristics {
+		font-size: 12px;
+		line-height: 16px;
+	}
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1150px) {
+	
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.circle {
+		width: 600px;
+		height: 600px;
+		padding: 200px 30px;
+	}
+	.circle > img {
+		width: 100%;
+	}
+	.subtitle {
+		font-size: 40px;
+		line-height: 90px;
+	}
+
+	.bg-header {
+		height: auto;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+	.circle {
+		width: 400px;
+		height: 400px;
+		padding: 120px 30px;
+	}
+	.subtitle {
+		font-size: 25px;
+		line-height: 70px;
+	}
+	.block-kont > img {
+		width: 100%;
+	}
+	.mnu > ul > li > a {
+		font-size: 12px;
+	}
+	.mnu > ul > li {
+		margin: 0 8px;
+	}
+	.calc-block label {
+		font-size: 14px;
+	}
+}
+@media only screen and (max-width : 576px) {
+	.logo {
+		margin-top: 15px;
+	}
+	.mnu > ul {
+		margin: 0;
+	}
+	.circle {
+		width: 260px;
+		height: 260px;
+		padding: 90px 20px;
+	}
+	.subtitle {
+		font-size: 18px;
+		line-height: 50px;
+	}
+	.calc-block > h3 {
+		font-size: 20px;
+	}
+	.bg-section4 {
+		padding-top: 100px;
+	}
+	.info > li {
+		font-size: 18px;
+	}
+	.calc-block {
+		padding: 0;
+	}
+	.tab {
+		margin: 0;
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.item-product > button {
+		margin: 0 10px;
+	}
+	.item-product > button {
+		font-size: 17px;
+	}
+	.calc-block label {
+		font-size: 10px;
+	}
+	.info-popap > input {
+		padding: 0 15px;
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	
+}
