@@ -9,7 +9,7 @@ $(function () {
 		center: true,
 		mouseDrag: false,
 		touchDrag: false,
-    autoHeight:true,
+		autoHeight: true,
 		responsive: {
 			0: {
 				items: 1
@@ -50,7 +50,7 @@ $(function () {
 		nav: true,
 		mouseDrag: false,
 		touchDrag: false,
-    autoHeight:true,
+		autoHeight: true,
 		responsive: {
 			0: {
 				items: 1
@@ -64,4 +64,29 @@ $(function () {
 		}
 	});
 
+	$('.popup-with-zoom-anim').magnificPopup({
+		type: 'inline',
+
+		fixedContentPos: true,
+		fixedBgPos: true,
+
+		overflowY: 'auto',
+
+		closeBtnInside: true,
+		preloader: false,
+
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in'
+	});
+
+});
+
+var sticky = new Waypoint.Sticky({
+	element: $('.menu')[0]
+})
+
+$('.header_menu_button').click(function (e) {
+	e.preventDefault();
+	$('.form_right').toggleClass('form_right_active');
 });
