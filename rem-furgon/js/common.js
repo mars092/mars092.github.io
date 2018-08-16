@@ -3,7 +3,7 @@ $(function () {
 	// Custom JS
 
 	$('.slider_work').owlCarousel({
-		loop: true,
+		loop: false,
 		margin: 0,
 		nav: true,
 		center: true,
@@ -45,7 +45,7 @@ $(function () {
 	});
 
 	$('.interesting_materials').owlCarousel({
-		loop: true,
+		loop: false,
 		margin: 30,
 		nav: true,
 		mouseDrag: false,
@@ -55,10 +55,10 @@ $(function () {
 			0: {
 				items: 1
 			},
-			600: {
-				items: 1
+			768: {
+				items: 2
 			},
-			1000: {
+			992: {
 				items: 3
 			}
 		}
@@ -89,4 +89,21 @@ var sticky = new Waypoint.Sticky({
 $('.header_menu_button').click(function (e) {
 	e.preventDefault();
 	$('.form_right').toggleClass('form_right_active');
+});
+
+
+$(document).ready(function () {
+	$("#button").on("click", "a", function (event) {
+		//отменяем стандартную обработку нажатия по ссылке
+		event.preventDefault();
+
+		//забираем идентификатор бока с атрибута href
+		var id = $(this).attr('href'),
+
+			//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;
+
+		//анимируем переход на расстояние - top за 1500 мс
+		$('body,html').animate({ scrollTop: top }, 1500);
+	});
 });
