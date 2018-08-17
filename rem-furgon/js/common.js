@@ -26,7 +26,7 @@ $(function () {
 	$('.slider_work_before').owlCarousel({
 		loop: true,
 		margin: 0,
-		nav: true,
+		nav: false,
 		mouseDrag: false,
 		touchDrag: false,
 		dots: false,
