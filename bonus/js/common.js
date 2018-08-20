@@ -6,7 +6,12 @@ $(function () {
 
 });
 
-$(document).on('click', '.spoiler-trigger', function (e) { e.preventDefault(); $(this).toggleClass('active'); $(this).parent().find('.spoiler-block').first().slideToggle(300); })
+$(document).on('click', '.spoiler-trigger', function (e) {
+	e.preventDefault();
+	$('.active').toggleClass('active').parent().find('.spoiler-block').first().slideToggle(300);
+	$(this).toggleClass('active');
+	$(this).parent().find('.spoiler-block').first().slideToggle(300);
+})
 
 $(document).ready(function () {
 	$("#menu").on("click", "a", function (event) {
