@@ -1,0 +1,137 @@
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	margin: 0;
+	line-height: 1.6;
+	font-family: "RobotoRegular", sans-serif;
+	overflow-x: hidden;
+}
+
+.content {
+	display: block;
+	margin: 0 auto; 
+	max-width: 700px;
+}
+
+.row {
+	display: block;
+	width: 100%;
+}
+
+.tests {
+	background-color: #8ECBF9;
+	padding: 20px;
+}
+
+.tests h1 {
+	position: relative;
+	display: block;
+	text-align: center;
+	padding: 0 60px;
+	margin: 0 0 20px 0;
+	font-size: 35px;
+}
+
+.tests h1:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translate(0%, -50%);
+	width: 50px;
+	height: 2px;
+	background-color: #000;
+}
+
+.tests h1:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	transform: translate(-100%, -50%);
+	width: 50px;
+	height: 2px;
+	background-color: #000;
+}
+
+.test {
+	display: block;
+	width: 100%;
+	background-color: #fff;
+}
+
+.test tr th:nth-child(1), .test tr th:nth-child(3), .test tr th:nth-child(4) {
+	width: 10%;
+}
+
+.choice {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	background-color: #3591D5;
+	color: #fff;
+	-webkit-transition: 0.4s;
+	-o-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.choice:hover {
+	background-color: #8ECBF9;
+}
+
+.choice.active {
+	background-color: #000;
+}
+
+.choice.active:hover {
+	background-color: grey;
+}
+
+.button {
+	display: block;
+	margin: 20px auto 0;
+	width: 200px;
+	height: 50px;
+	background-color: #fff;
+	border: 1px solid #000;
+	color: #000;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.4s;
+}
+
+.button:hover {
+	background-color: grey;
+	color: #fff;
+}
+
+.points {
+	position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	display: none;
+	max-width: 400px;
+	padding: 30px 15px;
+	border: 1px solid #000;
+	background-color: #3591D5;
+}
+
+.close {
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	color: #000;
+	font-size: 25px;
+	line-height: 25px;
+  top: 0%;
+  left: 98%;
+  transform: translate(-100%, -0%);
+}
+
+td, th, table {
+	border: 1px solid #000;
+}
