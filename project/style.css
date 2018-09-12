@@ -2999,6 +2999,7 @@ hr {
 /* Style the tab */
 .tab {
   overflow: hidden;
+  background-color: #f1f1f1;
 }
 
 .modal-body2 {
@@ -3015,8 +3016,8 @@ hr {
 /* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: inherit;
-  background-color: #ed1b2f;
-  border-radius: 21.5px;
+  float: left;
+  width: 50%;
   border: none;
   outline: none;
   cursor: pointer;
@@ -3024,23 +3025,17 @@ hr {
   transition: 0.3s;
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: bold;
-  color: #fff;
-}
-
-.tab .block_button {
-  width: 50%;
-  padding: 15px;
-  float: left;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  box-shadow: 0 0 20px #ed1b2f;
+  background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  box-shadow: 0 0 20px #ed1b2f;
+  background-color: #ed1b2f;
+  color: #fff;
 }
 
 /* Style the tab content */
@@ -3050,18 +3045,29 @@ hr {
   padding: 6px 12px;
   border-top: none;
 }
+.tabcontent ul {
+  position: relative;
+  padding-left: 20px;
+}
 .tabcontent ul li {
   list-style-type: none;
-  text-align: left;
+  display: block;
   margin-bottom: 5px;
+  text-align: left;
+}
+.tabcontent ul li span {
+  position: absolute;
+  left: 0;
+}
+.tabcontent ul li a {
+  color: #ED1B2F;
 }
 .tabcontent ul li ul li{
-  list-style-type: disc;
+  list-style-type: none;
   margin-left: 20px;
 }
-
-.tabcontent a {
-  color: #ED1B2F;
+.tabcontent ul li ul {
+  margin-top: 5px;
 }
 
 @media (min-width: 768px) {
