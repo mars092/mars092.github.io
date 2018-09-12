@@ -3058,6 +3058,23 @@ hr {
   }
 }
 
+@media (max-width: 768px) {
+  .modal-dialog.modal-dialog2 .modal-body2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.h375 {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .h375 {
+    display: block;
+  }
+}
+
 .tabcontent {
   animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }

@@ -390,7 +390,7 @@ $(document).ready(function () {
 
 $('.phoneMask').mask("+9 (999) 999-99-99");
 
-function openCity(evt, cityName) {
+function openItem(evt, cityName) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
