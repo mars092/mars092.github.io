@@ -1,0 +1,23 @@
+.block {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  background-color: #e8de22;
+  background-image: url('../img/hqdefault.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 3px solid #000;
+}
+
+.block span {
+  display: block;
+  text-align: center;
+}
+
+.block img {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+}
