@@ -8,32 +8,86 @@ $(function () {
 		swipeToSlide: true,
 		autoplay: true,
 		autoplaySpeed: 2000,
+		responsive: [{
+				breakpoint: 1618,
+				settings: {
+					slidesToShow: 5
+				}
+			},
+			{
+				breakpoint: 1199,
+				settings: {
+					slidesToShow: 4
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+		]
 	});
 
 	$('.slider_brand2').slick({
 		slidesToShow: 6,
-		slidesToScroll: 1,
-		swipeToSlide: true,
-		autoplay: true,
-		autoplaySpeed: 2000,
+		slidesToScroll: 1
 	});
 
 	$('.slider_objects').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		swipeToSlide: true,
+		responsive: [{
+				breakpoint: 1199,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+		]
 	});
 
 	$('.letter').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		swipeToSlide: true,
+		responsive: [{
+				breakpoint: 1199,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+		]
 	});
 
 	$('.licenses').slick({
 		slidesToShow: 2,
 		slidesToScroll: 1,
 		swipeToSlide: true,
+		// responsive: [{
+		// 	breakpoint: 992,
+		// 	settings: {
+		// 		slidesToShow: 1
+		// 	}
+		// }, ]
 	});
 
 });

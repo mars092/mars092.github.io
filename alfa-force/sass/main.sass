@@ -1,0 +1,1277 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	background-color: $bg_c
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text_w
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.header
+	background-image: url('../img/headbg.jpg')
+	background-repeat: no-repeat
+	background-position: center 0
+	background-size: cover
+	height: 1080px
+
+.menu
+	height: 130px
+
+.text_black_top
+	color: $text_black
+	font-family: Montserrat-Light, sans-serif
+	font-size: 16px
+	font-weight: 300
+	line-height: 25px
+
+.language_block
+	position: relative
+	margin: 0 0 0 40px
+	padding: 0
+	width: 100px
+	height: 55px
+	border: 2px solid rgba(255, 255, 255, 0.5)
+	border-radius: 5px
+	cursor: pointer
+	li
+		position: absolute
+		padding-right: 20px
+		display: none
+		color: $text_w
+		font-family: Montserrat-Bold, sans-serif
+		font-size: 14px
+		font-weight: 700
+		line-height: 50px
+		text-transform: uppercase
+		letter-spacing: 0.5px
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	li.active
+		display: inline-block
+		&:before
+			content: ''
+			position: absolute
+			width: 12px
+			height: 7px
+			background-image: url('../img/arrow_bottom.png')
+			background-repeat: no-repeat
+			top: 50%
+			left: 100%
+			transform: translate(-100%, -50%)
+
+.kont_top
+	padding: 0
+	margin: 0 0 0 80px
+	li
+		position: relative
+		list-style-type: none
+		line-height: 34px
+		padding-left: 30px
+	li:first-child
+		a
+			color: $text_w
+			font-family: Montserrat-Bold, sans-serif
+			font-size: 22px
+			font-weight: 700
+			text-transform: uppercase
+		&:before
+			content: ''
+			position: absolute
+			background-image: url('../img/phone.png')
+			background-repeat: no-repeat
+			width: 15px
+			height: 15px
+			top: 50%
+			left: 0%
+			transform: translate(0%, -50%)
+	li:last-child
+		a
+			color: $text_w
+			font-family: Montserrat-Light, sans-serif
+			font-size: 16px
+			font-weight: 300
+			text-decoration: underline
+
+.button
+	position: relative
+	display: inline-block
+	cursor: pointer
+	span
+		position: relative
+		display: block
+		z-index: 2
+		padding: 0 34px
+		height: 55px
+		background-color: #eec965
+		background-image: linear-gradient(to top, transparent 0%, transparent 25%, rgba(255, 255, 255, 0.16) 100%)
+		border-radius: 5px 5px 7px 7px
+		box-shadow: inset 0 -1px 5px rgba(255, 255, 255, 0.2)
+		text-shadow: 0 1px 0 rgba(255, 251, 233, 0.7)
+		color: #1a2026
+		font-family: Montserrat-Bold, sans-serif
+		font-size: 14px
+		font-weight: 700
+		letter-spacing: 0.5px
+		line-height: 55px
+		text-transform: uppercase
+	&:after
+		content: ''
+		position: absolute
+		display: block
+		width: 100%
+		height: 51px
+		left: 0
+		bottom: -4.5px
+		background-color: #a78b44
+		border-radius: 15px
+		transition: .4s
+	&:hover
+		color: #1a2026
+		text-decoration: none
+		&:after
+			bottom: 0px
+
+.header_title
+	display: block
+	margin-top: 140px
+	font-family: Montserrat-ExtraBold, sans-serif
+	font-size: 46px
+	font-weight: 700
+	line-height: 60px
+	color: $text_w
+	span
+		color: #2753c9
+		text-decoration: underline
+
+.subtitle
+	display: block
+	margin-top: 30px
+	color: $text_w
+	font-family: Montserrat-Light, sans-serif
+	font-size: 24px
+	font-weight: 300
+	line-height: 36px
+
+.button_header
+	margin-top: 65px
+
+.button_menu
+	display: block
+	span
+		text-align: center
+
+.header_title_slider
+	display: block
+	margin-top: 200px
+	margin-bottom: 30px
+	font-family: Montserrat-Light, sans-serif
+	font-size: 24px
+	font-weight: 300
+	line-height: 36px
+
+.slider_brand
+	display: block
+	padding: 0 30px
+	div.slick-slide
+		div
+			div
+				position: relative
+				height: 100px
+				img
+					position: absolute
+					cursor: pointer
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					transition: .4s
+					&:hover
+						opacity: 0.3
+
+.slick-next:before, .slick-prev:before, .slick-next, .slick-prev
+	width: 20px
+	height: 35px
+
+.slick-next
+	right: 0
+
+.slick-prev
+	left: 0
+
+.slick-prev.visible_prew
+	visibility: visible
+
+.slick-next, .slick-prev
+	&:before
+		content: ''
+		display: block
+		background-image: url('../img/arrow_slider.png')
+		background-repeat: no-repeat
+		opacity: 1
+		transition: .4s
+	&:hover
+		&:before
+			background-image: url('../img/arrow_slider_hover.png')
+
+.slick-next:before
+	transform: rotate(180deg)
+
+.section2
+	padding-top: 150px
+	padding-bottom: 70px
+	background-image: url('../img/s2bg.png')
+	background-repeat: no-repeat
+	background-position: 100% 100%
+
+.section2_title
+	display: block
+	margin-bottom: 80px
+	text-align: center
+	font-family: Montserrat-ExtraBold, sans-serif
+	font-size: 46px
+	font-weight: 700
+	line-height: 60px
+
+.slider
+	display: block
+	padding: 0 130px
+	margin-bottom: 60px
+
+.slider_block
+	position: relative
+	overflow: hidden
+	color: #000
+	height: 213px
+	background-color: white
+	background-image: linear-gradient(to right, transparent 0%, rgba(188, 204, 246, 0.46) 100%)
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45)
+	&:before
+		content: ''
+		position: absolute
+		top: -230px
+		left: -140px
+		width: 288px
+		height: 370px
+		transform: rotate(45deg)
+		background-color: #2753c9
+
+.section2_form_title
+	display: block
+	margin-bottom: 12px
+	color: rgba(255, 255, 255,0.3)
+	font-family: Montserrat-Light, sans-serif
+	font-size: 16px
+	font-weight: 300
+	line-height: 22px
+
+.section2_form_tel
+	display: block
+	padding: 0 25px
+	color: #000
+	width: 100%
+	height: 75px
+	background-color: white
+	border-radius: 5px
+	box-shadow: inset 0 2px 10px rgba(5, 15, 31, 0.2)
+	font-family: Montserrat-Light, sans-serif
+	font-size: 16px
+	font-weight: 300
+	line-height: 50px
+	text-transform: uppercase
+
+.section2_form_button
+	width: 100%
+	height: 71px
+	margin: 0
+	display: block
+	border: none
+	padding: 0
+	background-color: rgba(255, 255, 255, 0)
+	span
+		height: 70.5px
+		line-height: 70.5px
+	&:after
+		height: 65px
+
+.section2_bottom_text
+	display: block
+	margin-top: 150px
+	text-align: center
+	font-family: Montserrat-ExtraBold, sans-serif
+	font-size: 46px
+	font-weight: 700
+	line-height: 60px
+
+.section3
+	margin-left: -15px
+	margin-right: -15px
+
+.section3_block
+	position: relative
+	overflow: hidden
+	display: block
+	width: 100%
+	height: 500px
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	&:before
+		content: ''
+		position: absolute
+		z-index: 2
+		left: -590px
+		top: -410px
+		width: 700px
+		height: 700px
+		background-image: linear-gradient(165deg, rgba(39, 83, 201, 0.49) 0%, transparent 69%, transparent 100%)
+		transform: rotate(45deg)
+	&:after
+		content: ''
+		position: absolute
+		z-index: 3
+		top: -170px
+		left: -200px
+		width: 300px
+		height: 300px
+		background-color: #3a54c4
+		transform: rotate(45deg)
+	img.section3_ico
+		position: absolute
+		z-index: 4
+		top: 24px
+		left: 24px
+	.section3_block_mask
+		display: none
+		position: absolute
+		z-index: 1
+		width: 100%
+		height: 100%
+		background-color: rgba(39, 83, 201, 0.9)
+	h3.section3_block_title
+		position: absolute
+		display: block
+		text-align: center
+		width: 100%
+		font-family: Montserrat-Bold, sans-serif
+		font-size: 30px
+		font-weight: 700
+		line-height: 44px
+		text-transform: uppercase
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	.section3_block_list
+		position: relative
+		z-index: 6
+		display: none
+		width: 80%
+		margin: 0 auto
+		padding: 0 0 0 25px
+		li
+			position: relative
+			list-style-type: none
+			font-family: Montserrat-Light, sans-serif
+			font-size: 16px
+			font-weight: 300
+			line-height: 25px
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 35px
+			&:before
+				content: ''
+				position: absolute
+				top: 7px
+				left: -25px
+				width: 12px
+				height: 12px
+				background-image: url('../img/circl.png')
+				background-repeat: no-repeat
+	a.section3_block_button
+		position: relative
+		z-index: 6
+		margin: 0 auto
+		display: none
+		width: 290px
+		span
+			text-align: center
+			padding: 0
+	&:hover, &.active
+		div.section3_block_mask
+			display: block
+		&:before
+			background-color: rgba(255, 255, 255, 0.05)
+			background-image: linear-gradient(165deg, rgba(39, 83, 201, 0.49) 0%, transparent 69%, transparent 100%)
+		img.section3_ico
+			opacity: 0.5
+		h3.section3_block_title
+			position: relative
+			z-index: 6
+			left: 0
+			top: 0
+			margin-top: 55px
+			margin-bottom: 50px
+			transform: none
+		.section3_block_list
+			display: block
+		a.section3_block_button
+			display: block
+
+.section3_block1
+	background-image: url('../img/1.jpg')
+	
+.section3_block2
+	background-image: url('../img/2.jpg')
+	
+.section3_block3
+	background-image: url('../img/3.jpg')
+	
+.section3_block4
+	background-image: url('../img/4.jpg')
+	
+.section3_block5
+	background-image: url('../img/5.jpg')
+	
+.section3_block6
+	background-image: url('../img/6.jpg')
+
+.section4
+	padding-top: 80px
+	padding-bottom: 195px
+	background-image: url('../img/s4-bg.jpg')
+	background-repeat: no-repeat
+	background-position: center 0
+
+.section4_button
+	display: block
+	margin: 0px auto 150px
+	width: 360px
+	height: 75px
+	border: 2px solid rgba(238, 201, 101, 0.5)
+	border-radius: 5px 5px 7px 7px
+	color: #eec965
+	font-family: Montserrat-Bold, sans-serif
+	text-align: center
+	font-size: 16px
+	font-weight: 700
+	line-height: 75px
+	text-transform: uppercase
+	transition: 0.4s
+	&:hover
+		text-decoration: none
+		color: #fff
+		background-color: rgba(238, 201, 101, 0.5)
+
+.section4_title
+	display: block
+	margin-bottom: 90px
+	text-align: center
+	font-family: Montserrat-ExtraBold, sans-serif
+	font-size: 46px
+	font-weight: 700
+	line-height: 60px
+
+.slider_objects
+	padding: 0 85px
+	.slick-next, .slick-prev
+		top: 142.5px
+	.slick-slide
+		>div
+			padding: 0 15px
+			>div
+				position: relative
+				border-radius: 5px
+				>img
+					width: 100%
+					border-radius: 5px
+				>span
+					display: block
+					margin-top: 25px
+					text-align: center
+					font-family: Montserrat-Light, sans-serif
+					font-size: 24px
+					font-weight: 300
+					line-height: 36px
+				.section4_button-block
+					visibility: hidden
+					height: 105px
+					width: 100%
+					z-index: 10
+					padding: 25px 47px
+					.button
+						display: none
+						text-align: center
+				&:hover
+					background-image: linear-gradient(to top, rgba(39, 83, 201, 0.09) 0%, transparent 69%, transparent 100%)
+					.section4_button-block
+						visibility: visible
+						.button
+							display: block
+
+.section5
+	padding-top: 160px
+	padding-bottom: 130px
+
+.section5_title
+	display: block
+	text-align: center
+	font-family: Montserrat-ExtraBold, sans-serif
+	font-size: 46px
+	font-weight: 700
+	line-height: 60px
+
+.section5_subtitle
+	display: block
+	margin-top: 30px
+	margin-bottom: 75px
+	text-align: center
+	font-family: Montserrat-Light, sans-serif
+	font-size: 24px
+	font-weight: 300
+	line-height: 36px
+
+.section5_tab
+	position: relative
+	display: block
+	width: 320px
+	height: 84px
+	border: 2px solid rgba(255, 255, 255, 0.5)
+	border-radius: 5px
+	padding: 0 29px 0 125px
+	transition: .4s 
+	img
+		position: absolute
+		top: 50%
+		left: 29px
+		transform: translate(0%, -50%)
+		transition: .4s linear
+	img.tab_img1
+		opacity: 0
+	img.tab_img2
+		opacity: 1
+	span
+		display: block
+		margin-top: 15px
+		letter-spacing: .5px
+		color: #fff
+		font-family: Montserrat-Bold, sans-serif
+		font-size: 16px
+		font-weight: 700
+		line-height: 25px
+		text-transform: uppercase
+	&:hover, &.active
+		text-decoration: none
+		color: #fff
+		background-color: #2753c9
+		border-color: #2753c9
+		img.tab_img1
+			opacity: 1
+		img.tab_img2
+			opacity: 0
+
+.section5_block
+	display: block
+	margin-top: 80px
+	background-image: url('../img/man.png')
+	background-repeat: no-repeat
+	background-position: center 0
+	a.button
+		position: absolute
+		display: block
+		width: 360px
+		height: 70px
+		text-align: center
+		margin-top: -40px
+		top: 100%
+		left: 50%
+		transform: translate(-50%, -100%)
+		span
+			line-height: 70px
+			font-size: 16px
+			height: 70px
+	>div
+		display: none
+		height: 850px
+		&.active
+			display: block
+		>div:nth-child(1)
+			top: 31%
+			left: 12%
+		>div:nth-child(2)
+			top: 31%
+			left: 87%
+		>div:nth-child(3)
+			top: 61%
+			left: 10%
+		>div:nth-child(4)
+			top: 61%
+			left: 90%
+
+.section5_text
+	position: absolute
+	transform: translate(-50%, -50%)
+	display: block
+	width: 340px
+	font-family: Montserrat-Light, sans-serif
+	font-size: 24px
+	font-weight: 300
+	line-height: 36px
+	&.text_left
+		text-align: right
+
+.section6
+	margin-left: -15px
+	margin-right: -15px
+
+.section6_block
+	display: block
+	height: 890px
+	background-image: url('../img/s6_bg.jpg')
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+
+.section6_block_left
+	position: relative
+	display: block
+	height: 890px
+	background-image: url('../img/book.png')
+	background-repeat: no-repeat
+	background-position: -200px 80px
+	>div
+		position: absolute
+		transform: translate(0%, -50%)
+		p
+			position: absolute
+			display: block
+			width: 170px
+			margin: 0 0 0 20px
+			top: 50%
+			left: 100%
+			transform: translate(0%, -50%)
+			float: left
+			font-family: Montserrat-Light, sans-serif
+			font-size: 16px
+			font-weight: 300
+			line-height: 25px
+		span
+			position: relative
+			display: block
+			float: left
+			width: 70px
+			height: 70px
+			text-align: center
+			font-family: Montserrat-Bold, sans-serif
+			font-size: 16px
+			font-weight: 700
+			line-height: 70px
+			text-transform: uppercase
+			&:before
+				content: ''
+				position: absolute
+				z-index: -1
+				width: 70px
+				height: 70px
+				border-radius: 50%
+				background-color: rgba(39, 83, 201,.3)
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+			&:after
+				content: ''
+				position: absolute
+				z-index: -1
+				width: 40px
+				height: 40px
+				border-radius: 50%
+				background-color: #2753c9
+				background-image: linear-gradient(to top, transparent 0%, rgba(255, 255, 255, 0.09) 100%)
+				box-shadow: 0 10px 40px #4876f2
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+	>div:nth-child(1)
+		top: 110px
+		left: 355px
+	>div:nth-child(2)
+		top: 240px
+		left: 585px
+	>div:nth-child(3)
+		top: 418px
+		left: 759px
+
+.section6_block_right
+	padding-left: 40px
+	padding-right: 20px
+	.section6_title
+		display: block
+		margin-bottom: 35px
+		font-family: Montserrat-ExtraBold, sans-serif
+		font-size: 46px
+		font-weight: 700
+		line-height: 60px
+	>span
+		position: relative
+		display: block
+		margin-bottom: 45px
+		font-family: Montserrat-Light, sans-serif
+		font-size: 24px
+		line-height: 36px
+		font-weight: 300
+		>span
+			font-family: Montserrat-Bold, sans-serif
+			font-weight: 700
+			color: #2753c9
+		&:after
+			content: ''
+			position: absolute
+			width: 96px
+			height: 90px
+			background-image: url('../img/arrow_left.png')
+			background-repeat: no-repeat
+			top: 90%
+			left: 90%
+			transform: translate(-50%, -50%)
+	a.button
+		height: 70px
+		font-size: 16px
+		span
+			height: 70px
+			padding: 0 55px
+			line-height: 70px
+			letter-spacing: 0.5px
+
+.section7
+	padding-top: 150px
+	padding-bottom: 165px
+	background-image: url('../img/s7_bg.jpg')
+	background-repeat: no-repeat
+	background-position: 100% 100%
+
+.section7_title
+	display: block
+	text-align: center
+	font-family: Montserrat-ExtraBold, sans-serif
+	font-size: 46px
+	font-weight: 700
+	line-height: 60px
+
+.section7_subtitle
+	display: block
+	margin-top: 30px
+	margin-bottom: 85px
+	text-align: center
+	font-family: Montserrat-Light, sans-serif
+	font-size: 24px
+	font-weight: 300
+	line-height: 36px
+
+.section7_tabs
+	display: block
+	width: 100%
+	margin: 0
+	padding: 0 50px 0 0
+	li
+		display: block
+		margin-bottom: 40px
+		width: 100%
+		list-style-type: none
+		a
+			position: relative
+			display: block
+			height: 84px
+			border: 2px solid rgba(255, 255, 255, 0.5)
+			border-radius: 5px
+			color: #fff
+			transition: .4s
+			.block_img
+				position: relative
+				float: left
+				display: block
+				width: 30%
+				height: 80px
+				img
+					position: absolute
+					display: block
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+			.block_text
+				position: relative
+				float: left
+				width: 70%
+				display: block
+				height: 80px
+				span
+					position: absolute
+					display: block
+					width: 100%
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					font-family: Montserrat-Bold, sans-serif
+					letter-spacing: 0.5px
+					font-size: 16px
+					font-weight: 700
+					line-height: 25px
+					text-transform: uppercase
+		a:hover, .active
+			text-decoration: none
+			color: #fff
+			background-color: #2753c9
+			border-color: #2753c9
+	li:last-child
+		margin-bottom: 0
+
+.section7_block
+	position: relative
+	display: table
+	margin-bottom: 45px
+	width: 100%
+	.block_img
+		display: table-cell
+		width: 40%
+		vertical-align: middle
+		text-align: center
+	span
+		display: table-cell
+		width: 60%
+		vertical-align: middle
+		font-family: Montserrat-Light, sans-serif
+		font-size: 24px
+		font-weight: 300
+		line-height: 36px
+	&.edite
+		.block_img
+			width: 140px
+		.block_text
+			width: auto
+
+.section7_blocks
+	>div
+		display: none
+		&.active
+			display: block
+
+.section8
+	padding-top: 170px
+
+.section8_title
+	display: block
+	margin-bottom: 100px
+	font-family: Montserrat-ExtraBold, sans-serif
+	font-size: 46px
+	font-weight: 700
+	line-height: 60px
+
+.section8_block
+	display: block
+	padding: 20px 40px
+	margin-bottom: 100px
+	width: 100%
+	border: 2px solid rgba(255, 255, 255, 0.5)
+	border-radius: 5px
+	span.section8_block_title
+		display: block
+		padding: 1px 0
+		margin-bottom: 20px
+		text-align: center
+		font-size: 86px
+		line-height: 60px
+		font-family: Montserrat-SemiBold, sans-serif
+		font-weight: 600
+		background-image: linear-gradient(to top, #2753c9 0%, #aac1ff 100%)
+		background-clip: text
+		color: rgba(0,0,0,0)
+	span.section8_block_text
+		display: block
+		text-align: center
+		font-family: Montserrat-Light, sans-serif
+		font-size: 16px
+		font-weight: 300
+		line-height: 25px
+
+.section8_list
+	position: relative
+	display: block
+	padding-right: 100px
+	img
+		display: block
+		margin-bottom: 30px
+	span
+		display: block
+		font-family: Montserrat-Light, sans-serif
+		font-size: 24px
+		font-weight: 300
+		line-height: 36px
+	&:after
+		position: absolute
+		content: ''
+		width: 65px
+		height: 122px
+		background-image: url('../img/arrow_right.png')
+		background-repeat: no-repeat
+		top: 140px
+		right: 35px
+		transform: translate(0%, 0%)
+	&.last_list
+		padding-right: 0
+		&:after
+			display: none
+
+.section8_text_bottom
+	display: block
+	margin-top: 40px
+	margin-bottom: 5px
+	text-align: center
+	font-family: Montserrat-Light, sans-serif
+	font-size: 24px
+	font-weight: 300
+	line-height: 36px
+
+.section9
+	padding-top: 40px
+	padding-bottom: 45px
+	background-image: url('../img/s8_bg.jpg')
+	background-repeat: no-repeat
+	background-position: center 0
+
+.section9_button
+	display: block
+	margin: 0 auto 150px
+	width: 360px
+	height: 70px
+	span
+		text-align: center
+		line-height: 70px
+		height: 70px
+		font-size: 16px
+
+.section9_title
+	display: block
+	margin-bottom: 40px
+	text-align: center
+	font-family: Montserrat-ExtraBold, sans-serif
+	font-size: 46px
+	font-weight: 700
+	line-height: 60px
+	span
+		color: #2753c9
+
+.section9_subtitle
+	display: block
+	margin-bottom: 80px
+	text-align: center
+	font-family: Montserrat-Light, sans-serif
+	font-size: 24px
+	font-weight: 300
+	line-height: 36px
+
+.slider_brand2.slider_brand
+	.slick-slide
+		div
+			div
+				height: 150px
+				img:first-child
+					visibility: visible
+					opacity: 1
+				img:last-child
+					visibility: hidden
+					opacity: 0
+				&:hover
+					.img1:first-child
+						visibility: hidden
+						opacity: 0
+					.img2:last-child
+						visibility: visible
+						opacity: 1
+
+.slider2
+	display: block
+	margin-top: 70px
+	height: 535px
+	background-color: white
+	background-image: linear-gradient(to right, transparent 0%, rgba(188, 204, 246, 0.46) 100%)
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45)
+
+.section10
+	padding-top: 45px
+	padding-bottom: 170px
+	background-image: url('../img/s10_bg.jpg')
+	background-repeat: no-repeat
+	background-position: center 100%
+
+.section10_title
+	display: block
+	text-align: center
+	font-family: Montserrat-Bold, sans-serif
+	font-size: 30px
+	font-weight: 700
+	line-height: 44px
+	text-transform: uppercase
+
+.slider_objects2
+	padding: 0 85px
+	.slick-slide
+		>div
+			>div
+				padding: 30px 15px
+
+.section10_letter
+	position: relative
+	cursor: pointer
+	span
+		display: block
+		margin-top: 30px
+		text-align: center
+		font-family: Montserrat-Light, sans-serif
+		font-size: 24px
+		font-weight: 300
+		line-height: 36px
+		transition: .4s
+	div
+		position: relative
+		border-radius: 5px
+		transition: .4s
+		img
+			width: 100%
+			border-radius: 5px
+		.letter_mask
+			position: absolute
+			opacity: 1
+			z-index: 1
+			top: 0
+			width: 100%
+			height: 100%
+			transition: .4s
+			background-image: linear-gradient(30deg, #2753c9 0%, transparent 69%, transparent 100%)
+		&:before
+			content: ''
+			position: absolute
+			opacity: 1
+			z-index: 2
+			bottom: 30px
+			left: 25px
+			width: 27px
+			height: 27px
+			transition: .4s
+			background-image: url('../img/zoom.png')
+			background-repeat: no-repeat
+	&:hover
+		span
+			color: #2753c9
+		div
+			transform: scale(1.1)
+			.letter_mask
+				opacity: 0
+			&:before
+				opacity: 0
+
+.s10_map
+	display: block
+	width: 100%
+	margin: 40px auto
+
+.section10_text_bottom
+	display: block
+	margin: 0 auto
+	text-align: center
+	width: 625px
+	height: 110px
+	border-radius: 5px
+	box-shadow: inset 0 4px 51px rgba(0, 0, 0, 0.24)
+	font-family: Montserrat-Light, sans-serif
+	font-size: 24px
+	font-weight: 300
+	line-height: 110px
+
+.section11
+	padding-top: 160px
+	padding-bottom: 160px
+	background-image: url('../img/s11_bg.jpg')
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+
+.section11_title
+	display: block
+	margin-bottom: 35px
+	text-align: center
+	font-family: Montserrat-ExtraBold, sans-serif
+	font-size: 46px
+	font-weight: 700
+	line-height: 60px
+
+.section11_subtitle
+	display: block
+	margin-bottom: 70px
+	text-align: center
+	font-family: Montserrat-Light, sans-serif
+	font-size: 24px
+	font-weight: 300
+	line-height: 36px
+
+.licenses_title
+	display: block
+	margin-bottom: 40px
+	text-align: center
+	font-family: Montserrat-Bold, sans-serif
+	font-size: 30px
+	font-weight: 700
+	line-height: 44px
+	text-transform: uppercase
+
+.bottom_form
+	display: block
+	width: 80%
+	margin: 0 auto
+	input
+		display: block
+		margin-bottom: 30px
+		width: 100%
+		height: 70px
+		border: 2px solid rgba(255,255,255,.5)
+		border-radius: 5px 5px 7px 7px
+		background-color: rgba(0,0,0,0)
+
+.bottom_form_title
+	display: block
+	margin-bottom: 40px
+	font-family: Montserrat-Bold, sans-serif
+	font-size: 30px
+	font-weight: 700
+	line-height: 60px
+	text-transform: uppercase
+
+.bottom_form_subtitle
+	display: block
+	margin-bottom: 50px
+	font-family: Montserrat-Light, sans-serif
+	font-size: 24px
+	line-height: 36px
+	font-weight: 300
+	span
+		color: #2753c9
+		font-weight: 500
+		font-family: Montserrat-Medium, sans-serif
+
+.section11_mail_back
+	display: block
+	margin: 0 auto
+	width: 220px
+	height: 70px
+	background-image: url('../img/frame.png')
+	background-repeat: no-repeat
+	background-position: center
+	span
+		display: block
+		margin-left: 25px
+		font-family: Montserrat-Light, sans-serif
+		font-size: 24px
+		font-weight: 300
+		line-height: 18px
+	a
+		position: relative
+		display: block
+		margin-top: 13px
+		text-align: center
+		padding-left: 30px
+		color: #fff
+		font-family: Montserrat-Light, sans-serif
+		font-size: 16px
+		font-weight: 300
+		line-height: 18px
+		text-decoration: underline
+		&:before
+			content: ''
+			position: absolute
+			margin-left: -30px
+			width: 21px
+			height: 16px
+			background-image: url('../img/mail.png')
+
+.footer
+	position: relative
+	display: block
+	background-image: url('../img/footer bg.jpg')
+	background-repeat: no-repeat
+	background-position: 0 0
+
+.footer_height
+	height: 212px
+
+.footer_text
+	display: block
+	color: black
+	font-family: Montserrat-Light, sans-serif
+	font-size: 16px
+	font-weight: 300
+	line-height: 25px
+
+.footer_menu
+	display: block
+	width: 590px
+	padding: 0
+	margin: 0 auto
+	li
+		display: inline-block
+		margin: 0 50px
+		a
+			color: rgba(39, 83, 201, .9)
+			font-family: Montserrat-Light, sans-serif
+			font-size: 14px
+			font-weight: 300
+			line-height: 160px
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+		&:last-child
+			margin-right: 0
+		&:first-child
+			margin-left: 0
+
+.footer_call_back
+	.button
+		display: block
+		width: 100%
+		span
+			text-align: center
+	.footer_tel
+		display: block
+		margin-bottom: 15px
+		color: #fff
+		text-align: center
+		font-family: Montserrat-Bold, sans-serif
+		font-size: 22px
+		font-weight: 700
+		line-height: 22px
+		text-transform: uppercase
+
+@import "media" // Always at the end
