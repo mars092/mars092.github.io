@@ -32,6 +32,12 @@ $(function () {
 					slidesToShow: 2
 				}
 			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 1
+				}
+			},
 		]
 	});
 
@@ -56,6 +62,12 @@ $(function () {
 					slidesToShow: 2
 				}
 			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 1
+				}
+			},
 		]
 	});
 
@@ -73,6 +85,12 @@ $(function () {
 				breakpoint: 992,
 				settings: {
 					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 425,
+				settings: {
+					slidesToShow: 1
 				}
 			},
 		]
