@@ -46,6 +46,11 @@ $(function () {
 		slidesToScroll: 1
 	});
 
+	$('.slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
+
 	$('.slider_objects').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
