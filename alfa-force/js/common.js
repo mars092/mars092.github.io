@@ -85,6 +85,8 @@ $(function () {
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		swipeToSlide: true,
+		autoplay: true,
+		autoplaySpeed: 2000,
 		responsive: [{
 				breakpoint: 1199,
 				settings: {
@@ -194,4 +196,10 @@ $('.section7_tab').click(function (e) {
 			$('.section7_blocks').find('>div:eq(' + ind + ')').addClass('active');
 		}
 	}
+});
+
+$('.language_block li.active').click(function () {
+	$(this).removeClass('active');
+	$('.language_block li').css('display', 'block');
+	$('.language_block li').css('padding-right', '0px');
 });
