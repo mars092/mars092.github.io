@@ -44,6 +44,8 @@ $(function () {
 	$('.slider_brand2').slick({
 		slidesToShow: 6,
 		slidesToScroll: 1,
+		asNavFor: '.slider2',
+		focusOnSelect: true,
 		responsive: [{
 				breakpoint: 1199,
 				settings: {
@@ -78,7 +80,8 @@ $(function () {
 
 	$('.slider2').slick({
 		slidesToShow: 1,
-		slidesToScroll: 1
+		slidesToScroll: 1,
+		asNavFor: '.slider_brand2'
 	});
 
 	$('.slider_objects').slick({
@@ -198,8 +201,9 @@ $('.section7_tab').click(function (e) {
 	}
 });
 
-$('.language_block li.active').click(function () {
-	$(this).removeClass('active');
+$('.language_block li.active a').click(function (e) {
+	e.preventDefault();
+	$('.language_block li.active').removeClass('active');
 	$('.language_block li').css('display', 'block');
 	$('.language_block li').css('padding-right', '0px');
 });
