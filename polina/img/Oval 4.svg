@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="720.5" cy="4331.5" r="6.5"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="17" height="17">
+            <rect x="712" y="4323" width="17" height="17" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HP" transform="translate(-712.000000, -4323.000000)">
+            <g id="Oval-4">
+                <use fill="#4B44EA" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <use stroke="#4B44EA" mask="url(#mask-2)" stroke-width="4" xlink:href="#path-1"></use>
+                <use stroke="#FFFFFF" stroke-width="2" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
