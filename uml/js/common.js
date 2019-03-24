@@ -7,6 +7,7 @@ $(document).ready(function () {
 
 	width_container();
 	drop_menu_none();
+	setTimeout(popup_open, 15000);
 
 	$('.block_slider_they_trust_us .block_slider').slick({
 		infinite: true,
@@ -92,6 +93,12 @@ $(document).ready(function () {
 			$('#all_width_container').removeClass('container_all');
 			$('#all_width_container').addClass('container');
 		}
+	}
+
+	function popup_open() {
+		$.fancybox.open({
+			src: '#popup_big'
+		});
 	}
 
 });
