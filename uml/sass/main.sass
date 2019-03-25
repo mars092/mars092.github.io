@@ -1,0 +1,1048 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	font-weight: 400
+	line-height: normal
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+
+b, strong
+	font-weight: bold
+
+.position_static
+	position: static
+
+.position_relative
+	position: relative
+
+.header_index_bg
+	background-image: url('../img/bg-header.jpg')
+	background-repeat: no-repeat
+	background-position: 0 0
+	background-size: cover
+
+.header_mocap
+	position: absolute
+	top: 50%
+	left: calc(100% + 38px)
+	transform: translate(-100%, -50%)
+
+.block_menu_top
+	padding: 28px 0
+	display: flex
+	align-items: center
+	justify-content: space-between
+	.block_logo
+		display: flex
+		align-items: center
+		a
+			margin-right: 28px
+		h4
+			margin: 0
+			color: rgb(119, 134, 148)
+			font-family: "Montserrat"
+			font-size: 14px
+			font-weight: 300
+			line-height: 22px
+	.block_menu
+		display: flex
+		margin: 0
+		padding: 0
+		>li
+			list-style-type: none
+			margin-right: 60px
+			>a
+				color: rgb(255, 255, 255)
+				font-family: "Montserrat"
+				font-size: 14px
+				font-weight: 700
+				text-transform: uppercase
+				&:hover
+					text-decoration: none
+			.drop_menu
+				position: absolute
+				z-index: 2
+				visibility: hidden
+				opacity: 0
+				width: 255px
+				top: 34px
+				left: calc(100% - 6px)
+				transform: translate(-50%, 0)
+				box-shadow: 3px 0 60px rgba(8, 24, 41, 0.1)
+				background-color: rgb(255, 255, 255)
+				margin: 0
+				padding: 0
+				transition: 0.3s
+				li
+					list-style-type: none
+					a
+						display: flex
+						padding: 17px 20px
+						color: rgb(119, 134, 148)
+						font-family: "Montserrat"
+						font-size: 14px
+						line-height: 18px
+						font-weight: 300
+						border-bottom: 1px solid rgb(238, 238, 238)
+						transition: 0.3s
+						&:hover
+							color: rgb(204, 158, 74)
+							text-decoration: none
+							box-shadow: inset 3px 0 0 rgb(204, 158, 74)
+							background-color: rgb(249, 245, 236)
+				&:before
+					content: ''
+					position: absolute
+					top: -10px
+					height: 10px
+					width: 100%
+					background-image: url('../img/top-line-menu.svg')
+					background-repeat: no-repeat
+					background-size: cover
+			&:hover
+				.drop_menu
+					opacity: 1
+					visibility: visible
+			&.drop
+				position: relative
+				>a
+					&:after
+						position: relative
+						top: -1px
+						padding-left: 5px
+						content: url('../img/arrow_bottom.svg')
+			&:last-child
+				margin-right: 0
+	.block_contacts
+		margin: 0
+		padding: 0
+		li
+			list-style-type: none
+			margin-bottom: 16px
+			a.tel
+				position: relative
+				color: rgb(255, 255, 255)
+				font-family: "Playfair Display"
+				font-size: 24px
+				font-weight: 400
+				font-variant: lining-nums
+				&:hover
+					text-decoration: none
+				&:before
+					content: url('../img/tel.svg')
+					position: absolute
+					left: -14px
+					transform: translate(-100%, 0)
+			a.mail
+				color: rgb(119, 134, 148)
+				font-family: "Montserrat"
+				font-size: 14px
+				font-weight: 300
+				text-decoration: underline
+			&:last-child
+				margin-bottom: 0
+	.block_shop
+		display: flex
+		a
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 50px
+			height: 50px
+			border: 1px solid rgb(255, 255, 255)
+			border-radius: 50%
+			transition: 0.3s
+			.favorites_color, .basket_color
+				transition: 0.3s
+			&.favorites
+				margin-right: 15px
+			&:hover
+				border-color: rgb(204, 158, 74)
+				background-color: rgb(204, 158, 74)
+				.favorites_color, .basket_color
+					fill: rgb(8, 24, 41)
+
+.header_main_block
+	display: flex
+	align-items: center
+	height: 760px
+	.inner
+		h1
+			position: relative
+			margin-bottom: 35px
+			color: rgb(255, 255, 255)
+			font-family: 'Playfair Display'
+			font-size: 54px
+			font-weight: 400
+			line-height: 64px
+			&:before
+				content: ''
+				position: absolute
+				top: 34px
+				left: -18px
+				transform: translate(-100%, 0)
+				width: 169px
+				height: 3px
+				background-image: url('../img/line.svg')
+				background-repeat: no-repeat
+		h2
+			margin-bottom: 65px
+			color: rgb(255, 255, 255)
+			font-family: "Montserrat"
+			font-size: 24px
+			font-weight: 400
+			line-height: 36px
+
+.btn_bulk
+	position: relative
+	display: flex
+	margin-bottom: 4px
+	width: 351px
+	height: 69px
+	background: none
+	padding: 0
+	border: none
+	cursor: pointer
+	span
+		position: absolute
+		top: 0
+		z-index: 2
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
+		height: 100%
+		border-radius: 10px
+		box-shadow: inset 2px 0 2px rgba(255, 255, 255, 0.25)
+		background-color: rgb(25, 203, 172)
+		text-shadow: 1px 0 0 rgba(255, 255, 255, 0.4)
+		color: rgb(38, 54, 74)
+		font-family: "Montserrat"
+		font-size: 14px
+		font-weight: 700
+		line-height: 22px
+		text-transform: uppercase
+		letter-spacing: 1.4px
+	.mask
+		position: absolute
+		z-index: 1
+		width: 100%
+		height: 100%
+		bottom: -4px
+		border-radius: 18px
+		background-color: rgb(30, 131, 112)
+		transition: 0.3s
+	&:hover
+		.mask
+			bottom: 0
+
+.block_slider_they_trust_us
+	display: flex
+	align-items: center
+	padding: 30px 0
+	.block_slider_name
+		width: 200px
+		flex-shrink: 0
+		span
+			color: rgb(255, 255, 255)
+			font-family: "Montserrat"
+			font-size: 24px
+			font-weight: 400
+	.block_slider
+		width: 100%
+		.item
+			.img
+				display: flex
+				align-items: flex-end
+				justify-content: center
+				margin-bottom: 20px
+				width: 100%
+				height: 60px
+			.text
+				display: block
+				text-align: center
+				color: rgb(119, 134, 148)
+				font-family: "Montserrat"
+				font-size: 14px
+				font-weight: 300
+				text-transform: uppercase
+				letter-spacing: 1.4px
+
+.section_indent
+	padding-top: 120px
+	padding-bottom: 150px
+
+.section_indent2
+	padding-top: 120px
+	padding-bottom: 120px
+
+.section_indent3
+	padding-top: 120px
+	padding-bottom: 225px
+
+.block_advantages
+	display: flex
+	justify-content: space-between
+	width: 100%
+	.item
+		.title
+			color: rgb(204, 158, 74)
+			font-family: 'Playfair Display'
+			font-size: 24px
+			line-height: 30px
+			font-weight: 400
+			margin-bottom: 20px
+			span
+				font-size: 54px
+		.text
+			color: rgb(119, 134, 148)
+			font-family: "Montserrat"
+			font-size: 16px
+			font-weight: 300
+			line-height: 26px
+
+.bg_blue
+	background-color: rgb(8, 24, 41)
+
+.bgc_white
+	background-color: rgb(243, 247, 250)
+
+.block_buy_or_become
+	display: flex
+	>div
+		width: 50%
+		padding-top: 120px
+		padding-bottom: 150px
+		.title
+			font-family: "Montserrat"
+			margin-bottom: 30px
+			color: rgb(8, 24, 41)
+			font-size: 30px
+			font-weight: 500
+			line-height: 42px
+			text-transform: uppercase
+		.btn_bulk
+			width: 300px
+		&.block_left
+			background-image: url('../img/buy-equipment.jpg')
+			background-repeat: no-repeat
+			background-position: 100% 0
+			background-size: cover
+		&.block_right
+			background-image: url('../img/become-partner.jpg')
+			background-repeat: no-repeat
+			background-position: 0 0
+			background-size: cover
+			.title
+				text-align: right
+			.btn_bulk
+				margin-left: calc(100% - 300px)
+
+.block_categories_of_products_title
+	margin-bottom: 85px
+	.title
+		margin-bottom: 20px
+		color: rgb(8, 24, 41)
+		font-family: 'Playfair Display'
+		font-size: 48px
+		font-weight: 400
+		&:before
+			content: ''
+			position: absolute
+			top: 36px
+			left: -18px
+			transform: translate(-100%, 0)
+			width: 169px
+			height: 3px
+			background-image: url('../img/line2.svg')
+			background-repeat: no-repeat
+	.subtitle
+		margin: 0
+		color: rgb(204, 158, 74)
+		font-family: 'Montserrat'
+		font-size: 24px
+		font-weight: 400
+
+.btn_transparent
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 10px
+	border: 1px solid rgb(78, 215, 191)
+	width: 250px
+	height: 55px
+	color: rgb(78, 215, 191)
+	font-family: Montserrat
+	font-size: 14px
+	font-weight: 700
+	text-transform: uppercase
+	letter-spacing: 1.4px
+	transition: 0.3s
+	&:hover
+		color: rgb(78, 215, 191)
+		text-decoration: none
+
+.block_categories_of_products
+	position: relative
+	background-color: #000
+	padding: 50px 60px
+	width: 100%
+	height: 320px
+	overflow: hidden
+	margin-bottom: 30px
+	.mask_img
+		position: absolute
+		z-index: 1
+		top: 0
+		height: 100%
+	.mask_bg
+		position: absolute
+		z-index: 2
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+	.mask_bg_blue
+		position: absolute
+		z-index: 3
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+		transition: 0.3s
+	.inner
+		position: relative
+		z-index: 5
+		.title
+			position: relative
+			margin-bottom: 30px
+			color: rgb(255, 255, 255)
+			font-family: Montserrat
+			font-size: 30px
+			font-weight: 500
+			line-height: 42px
+			text-transform: uppercase
+			span
+				transition: 0.3s
+			&:before
+				content: ''
+				position: absolute
+				top: 19px
+				left: -60px
+				width: 40px
+				height: 3px
+				background-color: rgb(255, 255, 255)
+		.btn_transparent
+			width: 250px
+	&.left
+		.mask_img
+			left: 0
+		.mask_bg
+			background-image: linear-gradient(to right, rgb(8, 24, 41) 0%, rgba(8, 24, 41, 0) 100%)
+	&.right
+		.inner
+			.title
+				text-align: right
+				&:before
+					right: -60px
+					left: auto
+			.btn_transparent
+				margin-left: calc(100% - 250px)
+		.mask_img
+			right: 0
+		.mask_bg
+			background-image: linear-gradient(to right, rgba(8, 24, 41, 0) 0%, rgb(8, 24, 41) 100%)
+	&:hover
+		.mask_bg_blue
+			visibility: visible
+			opacity: 1
+		.inner
+			.title
+				span
+					color: #fff !important
+			.btn_transparent
+				border-color: #fff
+				color: rgb(255, 255, 255)
+		&.tree_poppy
+			.mask_bg_blue
+				background-image: linear-gradient(to right, rgba(255, 147, 30,.9) 0%, rgba(37, 37, 253, 0) 100%)
+		&.gray
+			.mask_bg_blue
+				background-image: linear-gradient(to right, rgba(37, 37, 253, 0) 0%, rgba(128, 128, 128,.9) 100%)
+		&.curious_blue
+			.mask_bg_blue
+				background-image: linear-gradient(to right, rgba(41, 171, 226,.9) 0%, rgba(37, 37, 253, 0) 100%)
+		&.blue
+			.mask_bg_blue
+				background-image: linear-gradient(to right, rgba(37, 37, 253, 0) 0%, rgba(37, 37, 253,.9) 100%)
+		&.broom
+			.mask_bg_blue
+				background-image: linear-gradient(to right, rgba(252, 238, 33,.9) 0%, rgba(37, 37, 253, 0) 100%)
+		&.gimblet
+			.mask_bg_blue
+				background-image: linear-gradient(to right, rgba(37, 37, 253, 0) 0%, rgba(187, 172, 110,.9) 100%)
+		&.fun_green
+			.mask_bg_blue
+				background-image: linear-gradient(to right, rgba(1, 123, 65,.9) 0%, rgba(37, 37, 253, 0) 100%)
+		&.lochmara
+			.mask_bg_blue
+				background-image: linear-gradient(to right, rgba(37, 37, 253, 0) 0%, rgba(0, 113, 188,.9) 100%)
+		&.sushi
+			.mask_bg_blue
+				background-image: linear-gradient(to right, rgba(140, 198, 63,.9) 0%, rgba(37, 37, 253, 0) 100%)
+		&.red
+			.mask_bg_blue
+				background-image: linear-gradient(to right, rgba(37, 37, 253, 0) 0%, rgba(255, 0, 0,.9) 100%)
+
+.block_categories_of_products
+	&.tree_poppy
+		.inner
+			.title
+				span
+					color: rgb(255, 147, 30)
+	&.gray
+		.inner
+			.title
+				span
+					color: rgb(128, 128, 128)
+	&.curious_blue
+		.inner
+			.title
+				span
+					color: rgb(41, 171, 226)
+	&.blue
+		.inner
+			.title
+				span
+					color: rgb(37, 37, 253)
+	&.broom
+		.inner
+			.title
+				span
+					color: rgb(252, 238, 33)
+	&.gimblet
+		.inner
+			.title
+				span
+					color: rgb(187, 172, 110)
+	&.fun_green
+		.inner
+			.title
+				span
+					color: rgb(1, 123, 65)
+	&.lochmara
+		.inner
+			.title
+				span
+					color: rgb(0, 113, 188)
+	&.sushi
+		.inner
+			.title
+				span
+					color: rgb(140, 198, 63)
+	&.red
+		.inner
+			.title
+				span
+					color: rgb(255, 0, 0)
+
+.bg_block_free_calculation
+	background-image: url('../img/bg-zamer.jpg')
+	background-repeat: no-repeat
+	background-position: 0 0
+	background-size: cover
+
+.block_free_calculation
+	.title
+		margin-bottom: 30px
+		color: rgb(255, 255, 255)
+		font-family: 'Playfair Display'
+		font-size: 48px
+		font-weight: 400
+		line-height: 56px
+		&:before
+			content: ''
+			position: absolute
+			top: 34px
+			left: -18px
+			transform: translate(-100%, 0)
+			width: 169px
+			height: 3px
+			background-image: url('../img/line.svg')
+			background-repeat: no-repeat
+	.subtitle
+		margin-bottom: 100px
+		color: rgb(204, 158, 74)
+		font-family: 'Montserrat'
+		font-size: 24px
+		font-weight: 400
+		line-height: 36px
+	.list
+		margin: 0
+		padding: 0
+		counter-reset: list 0
+		li
+			position: relative
+			padding-left: 110px
+			margin-bottom: 50px
+			list-style-type: none
+			color: rgb(255, 255, 255)
+			font-family: Montserrat
+			font-size: 16px
+			font-weight: 300
+			line-height: 26px
+			&:before
+				position: absolute
+				left: 28px
+				top: calc(50% - 2px)
+				transform: translate(0, -50%)
+				counter-increment: list
+				content: '0' counter(list)
+				color: rgb(78, 215, 191)
+				font-family: 'Playfair Display'
+				font-size: 24px
+				line-height: 20px
+				font-weight: 400
+			&:after
+				position: absolute
+				content: ''
+				top: calc(50% + 25px)
+				left: 41px
+				transform: translate(-50%, 0%)
+				width: 1px
+				height: 33px
+				background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgb(78, 215, 191) 100%)
+			&:last-child
+				margin-bottom: 0
+				&:after
+					display: none
+	&.black
+		.title
+			color: rgb(8, 24, 41)
+			&:before
+				left: calc(100% + 4px)
+				transform: translate(0%, 0) rotate(-180deg)
+				background-image: url('../img/line2.svg')
+		.list
+			li
+				color: rgb(8, 24, 41)
+	&.edite_margin
+		.subtitle
+			margin-bottom: 85px
+
+.section_indent4
+	padding-top: 215px
+	padding-bottom: 100px
+
+.block_form
+	position: absolute
+	z-index: 2
+	top: 0
+	width: 100%
+	transform: translate(0, -50%)
+	display: flex
+	padding: 50px 30px
+	box-shadow: 3px 0 60px rgba(8, 24, 41, 0.1)
+	background-color: rgb(255, 255, 255)
+	.block_input, button
+		width: 100%
+		margin: 0 30px
+	.block_input
+		position: relative
+		display: flex
+		.required
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translate(0, -50%)
+			transition: 0.3s
+		input
+			outline: none
+			width: 100%
+			border: none
+			border-bottom: 3px solid rgb(229, 232, 236)
+			color: rgb(38, 54, 74)
+			font-family: Montserrat
+			font-size: 14px
+			font-weight: 700
+			line-height: 22px
+			text-transform: uppercase
+			transition: 0.3s
+			&:focus
+				border-color: rgb(216, 241, 237)
+		&.active
+			.required
+				top: 0
+				transform: translate(0, 0)
+				color: rgb(78, 215, 191)
+				.svg_color
+					fill: rgb(78, 215, 191)
+	&.edite_position
+		position: static
+		transform: translate(0, 0)
+		margin-bottom: 90px
+
+.mocap
+	position: absolute
+	z-index: 1
+	bottom: -90px
+	left: -143px
+
+.block_saving
+	display: flex
+	width: 100%
+	margin-bottom: 50px
+	.item
+		display: flex
+		align-items: center
+		margin-right: 75px
+		.numb
+			color: rgb(204, 158, 74)
+			font-family: 'Playfair Display'
+			font-size: 24px
+			font-weight: 400
+			line-height: 64px
+			margin-right: 17px
+			span
+				font-size: 54px
+		.text
+			color: rgb(119, 134, 148)
+			font-family: Montserrat
+			font-size: 16px
+			font-weight: 300
+			line-height: 26px
+		&:last-child
+			margin-right: 0
+
+.section_indent5
+	padding-top: 70px
+	padding-bottom: 125px
+
+.section_indent6
+	padding-top: 120px
+
+.bg_block_saving
+	background-image: url('../img/bg-position.jpg')
+	background-repeat: no-repeat
+	background-position: 0 0
+	background-size: cover
+
+.block_certificates
+	.title
+		margin-bottom: 70px
+		color: rgb(255, 255, 255)
+		font-family: 'Playfair Display'
+		font-size: 48px
+		font-weight: 400
+		line-height: 56px
+		&:before
+			content: ''
+			position: absolute
+			top: 34px
+			left: -18px
+			transform: translate(-100%,0)
+			width: 169px
+			height: 3px
+			background-image: url(../img/line.svg)
+			background-repeat: no-repeat
+	.list
+		padding: 0
+		margin: 0
+		li
+			position: relative
+			padding-left: 20px
+			margin-bottom: 15px
+			list-style-type: none
+			color: rgb(255, 255, 255)
+			font-family: Montserrat
+			font-size: 16px
+			font-weight: 300
+			line-height: 26px
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 10px
+				width: 6px
+				height: 6px
+				border-radius: 50%
+				background-color: rgb(204, 158, 74)
+			&:last-child
+				margin-bottom: 0
+
+.mocap2
+	position: absolute
+	bottom: -88px
+	right: 168px
+
+.grey_block
+	padding: 65px 0
+	background-color: rgb(243, 247, 250)
+	span.text
+		color: rgb(8, 24, 41)
+		font-family: Montserrat
+		font-size: 30px
+		font-weight: 500
+		line-height: 64px
+		text-transform: uppercase
+		a
+			text-decoration: underline
+			color: rgb(78, 215, 191)
+
+.mocap3
+	position: absolute
+	bottom: 12px
+	left: 335px
+
+.footer_indent
+	padding-top: 90px
+	padding-bottom: 85px
+
+.block_footer
+	display: flex
+	justify-content: space-between
+	width: 100%
+	.item
+		.chmerev_digital
+			display: inline-block
+			margin-top: 70px
+			font-family: Panton
+			font-size: 16px
+			color: rgb(119, 134, 148)
+			font-weight: 300
+			a
+				font-weight: 700
+				color: rgb(220, 197, 128)
+		.link
+			display: inline-block
+			margin-bottom: 45px
+			.svg_color
+				transition: 0.3s
+			span
+				margin-left: 7px
+				color: rgb(255, 255, 255)
+				font-family: Montserrat
+				font-size: 14px
+				font-weight: 700
+				line-height: 22px
+				text-decoration: underline
+				text-transform: uppercase
+				transition: 0.3s
+			&:hover
+				text-decoration: none
+				.svg_color
+					fill: rgb(78, 215, 191)
+				span
+					color: rgb(78, 215, 191)
+		.block_contacts
+			margin: 0 0 45px 0
+			padding: 0
+			li
+				list-style-type: none
+				margin-bottom: 15px
+				.tel
+					color: rgb(255, 255, 255)
+					font-family: 'Playfair Display'
+					font-size: 24px
+					font-weight: 400
+					text-transform: uppercase
+					font-variant: lining-nums
+					&:hover
+						text-decoration: none
+				.mail
+					color: rgb(119, 134, 148)
+					font-family: Montserrat
+					font-size: 14px
+					font-weight: 300
+					line-height: 18px
+					text-decoration: underline
+				&:last-child
+					margin-bottom: 0
+		.title
+			display: block
+			color: rgb(255, 255, 255)
+			font-family: Montserrat
+			font-size: 14px
+			font-weight: 700
+			text-transform: uppercase
+			margin-bottom: 25px
+		.list
+			margin: 0 0 65px 0
+			padding: 0
+			li
+				list-style-type: none
+				margin-bottom: 15px
+				a
+					color: rgb(119, 134, 148)
+					font-family: Montserrat
+					font-size: 14px
+					font-weight: 300
+					transition: 0.3s
+					&:hover
+						color: rgb(204, 158, 74)
+				&:last-child
+					margin-bottom: 0
+			&:last-child
+				margin-bottom: 0
+
+.popup_big.fancybox-content, .popup_small.fancybox-content
+	width: 810px
+	padding: 60px
+	overflow: visible
+	>.title
+		display: block
+		margin: 0 0 60px 0
+		text-align: center
+		color: rgb(8, 24, 41)
+		font-family: Montserrat
+		font-size: 30px
+		font-weight: 500
+		line-height: 42px
+		text-transform: uppercase
+	.block_form_popup
+		width: 350px
+		div.popup_row
+			margin-bottom: 50px
+			.btn_bulk
+				width: 100%
+			.title
+				color: rgb(8, 24, 41)
+				font-family: Montserrat
+				font-size: 14px
+				font-weight: 700
+				line-height: 26px
+				text-transform: uppercase
+			.blocks_radio
+				display: flex
+				justify-content: space-between
+				margin-top: 20px
+				.block_radio
+					display: inline-flex
+					align-items: center
+					>span
+						margin-left: 10px
+						color: rgb(119, 134, 148)
+						font-family: Montserrat
+						font-size: 14px
+						font-weight: 300
+						line-height: 22px
+						transition: 0.3s
+					&.active
+						>span
+							color: rgb(8, 24, 41)
+			.block_input
+				position: relative
+				display: flex
+				margin-bottom: 5px
+				.required
+					position: absolute
+					left: 0
+					top: 50%
+					transform: translate(0, -50%)
+					transition: 0.3s
+				input
+					outline: none
+					width: 100%
+					height: 69px
+					border: none
+					border-bottom: 3px solid rgb(229, 232, 236)
+					color: rgb(38, 54, 74)
+					font-family: Montserrat
+					font-size: 14px
+					font-weight: 700
+					line-height: 22px
+					text-transform: uppercase
+					transition: 0.3s
+					&:focus
+						border-color: rgb(216, 241, 237)
+				&.active
+					.required
+						top: 0
+						transform: translate(0, 0)
+						color: rgb(78, 215, 191)
+						.svg_color
+							fill: rgb(78, 215, 191)
+			&:last-child
+				margin-bottom: 0
+
+.popup_small.fancybox-content
+	width: 470px
+
+.fancybox-bg
+	background-color: rgb(8, 24, 41)
+
+.container_radio
+	position: relative
+	display: inline-block
+	width: 20px
+	height: 20px
+	margin: 0
+	padding: 0
+	overflow: hidden
+	cursor: pointer
+	user-select: none
+	input
+		position: absolute
+		opacity: 0
+		cursor: pointer
+
+.checkmark
+	position: absolute
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	background-color: rgb(229, 232, 236)
+	border-radius: 50%
+	transition: 0.3s
+
+.container_radio
+	&:hover input ~ .checkmark
+		background-color: rgb(216, 241, 237)
+	input:checked ~ .checkmark
+		background-color: rgb(216, 241, 237)
+
+.checkmark:after
+	content: ""
+	position: absolute
+	display: none
+	transition: 0.3s
+
+.container_radio
+	input:checked ~ .checkmark:after
+		display: block
+	.checkmark:after
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 6px
+		height: 6px
+		background-color: rgb(78, 215, 191)
+		border-radius: 50%
+
+.mocap4
+	position: absolute
+	bottom: 35px
+	right: -250px
+
+.ovh
+	overflow: hidden
+
+.popup_small.fancybox-content .block_form_popup
+	margin: 0 auto
+
+.mocap_free_calculation
+	position: absolute
+	bottom: 0
+	right: 300px
+
+@import "media" // Always at the end
