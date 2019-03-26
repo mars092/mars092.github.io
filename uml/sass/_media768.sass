@@ -1,0 +1,81 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥768px
++media-breakpoint-down(sm)
+	.block_form
+		width: 100%
+	.block_form .block_input input
+		font-size: 10px
+	section.block_form_indent
+		padding-right: 30px
+	.block_form
+		flex-direction: column
+	.block_form .block_input input
+		height: 60px
+		margin-bottom: 10px
+	.section_indent4
+		padding-top: 180px
+	.section_indent3
+		padding-bottom: 170px
+	.block_form
+		padding: 20px
+	.block_saving .item
+		flex-direction: column
+	.block_saving .item .numb
+		margin-right: 0
+		line-height: 35px
+	.block_saving .item .text
+		text-align: center
+	.block_categories_of_products_title .title, .block_certificates .title, .block_free_calculation .title
+		br
+			display: none
+	.footer_indent
+		padding-top: 40px
+		padding-bottom: 40px
+	.block_footer
+		flex-direction: column
+		.item
+			margin-bottom: 20px
+	.block_footer .item .title
+		margin-bottom: 10px
+	.block_footer .item .list
+		margin-bottom: 20px
+	.block_footer .item .chmerev_digital
+		margin-top: 0
+	.block_menu_top .block_menu
+		padding: 15px
+	.header_main_block .inner h2
+		margin-bottom: 40px
+	.block_slider_they_trust_us .block_slider .item .img img
+		width: 100px
+	.block_slider_they_trust_us .block_slider_name span
+		font-size: 16px
+	.block_form .block_input, .block_form button
+		margin: 0
+	.popup_big.fancybox-content
+		width: 500px
+	.block_menu_top .item:nth-child(3)
+		order: 2
+		width: 100%
+	.block_menu_top
+		flex-wrap: wrap
+	.block_menu_top .block_contacts
+		display: flex
+		justify-content: space-evenly
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1600px
++media-breakpoint-up(xl)
