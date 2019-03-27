@@ -130,10 +130,6 @@
 		width: 450px
 	.mocap_free_calculation
 		width: 450px
-	.block_category_selection .item
-		width: calc(100% / 5)
-	.block_category_selection
-		flex-wrap: wrap
 	.block_category_selection .item a .text, .main_block_filters .block_left
 		margin-bottom: 10px
 	.main_block_filters .block_filters
@@ -167,6 +163,11 @@
 		.item
 			margin-right: 0
 			margin-bottom: 10px
+	.block_category_selection
+		overflow: auto
+		.item
+			flex-shrink: 0
+			width: 130px
 
 /*==========  Mobile First  ==========*/
 
