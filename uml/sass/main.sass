@@ -1241,14 +1241,13 @@ header
 		font-size: 16px
 		font-weight: 300
 		line-height: 26px
-
-.block_left
-	display: flex
-	.item
-		width: 260px
-		margin-right: 65px
-		&:last-child
-			margin-right: 0
+	.block_left
+		display: flex
+		.item
+			width: 260px
+			margin-right: 65px
+			&:last-child
+				margin-right: 0
 
 .custom-select
 	position: relative
@@ -1287,6 +1286,8 @@ header
 	left: 0
 	right: 0
 	z-index: 10
+	border-right: 1px solid rgb(238, 238, 238)
+	border-left: 1px solid rgb(238, 238, 238)
 	div
 		padding: 15px 20px
 		border-bottom: 1px solid rgb(238, 238, 238)
@@ -1506,6 +1507,256 @@ header
 			&:first-child
 				margin-left: 0
 		.btn_bulk
+			margin-right: 0
+
+.section_indent7
+	padding-top: 85px
+	padding-bottom: 150px
+
+.block_card_photos
+	display: flex
+	margin-bottom: 75px
+	.block_big
+		width: 100%
+		margin-right: 15px
+		a
+			display: flex
+			align-items: center
+			justify-content: center
+			border: 1px solid rgb(238, 238, 238)
+			height: 630px
+			img
+				max-width: 100%
+				max-height: 100%
+	.block_small
+		display: flex
+		flex-wrap: wrap
+		align-content: space-between
+		width: 360px
+		flex-shrink: 0
+		.item
+			width: 100%
+			height: 200px
+			a
+				display: flex
+				justify-content: center
+				align-items: center
+				border: 1px solid rgb(238, 238, 238)
+				height: 200px
+				img
+					max-width: 100%
+					max-height: 100%
+
+.fancybox-thumbs__list a:before
+	border-color: #cc9e4a
+
+.block_basic_information
+	display: flex
+	justify-content: space-between
+	width: 100%
+	margin-bottom: 70px
+	.item
+		display: flex
+		align-items: center
+		.img
+			margin-right: 20px
+		.text
+			color: rgb(8, 24, 41)
+			font-family: Montserrat
+			font-size: 16px
+			font-weight: 300
+			line-height: 26px
+
+.block_tab_links
+	position: relative
+	z-index: 2
+	display: flex
+	margin: 0
+	padding: 0
+	.tab_link
+		list-style-type: none
+		width: 360px
+		margin-right: 4px
+		margin-bottom: 5px
+		border-radius: 10px
+		background-color: rgb(219, 223, 229)
+		transition: 0.3s
+		border: 1px solid rgb(219, 223, 229)
+		a
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100%
+			height: 55px
+			color: rgb(255, 255, 255)
+			font-family: Montserrat
+			font-size: 14px
+			font-weight: 700
+			line-height: 22px
+			border-radius: 10px
+			text-transform: uppercase
+			letter-spacing: 1.4px
+			transition: 0.3s
+			&:hover
+				text-decoration: none
+		&:hover
+			background-color: rgb(204, 158, 74)
+			border-color: rgb(204, 158, 74)
+		&:last-child
+			margin-right: 0
+		&.active
+			background-color: #fff
+			border: 1px solid rgb(238, 238, 238)
+			border-bottom: none
+			margin-bottom: 0
+			border-radius: 10px 10px 0 0
+			a
+				color: rgb(8, 24, 41)
+
+.block_tabs
+	position: relative
+	z-index: 1
+	top: -1px
+	.block_tab
+		position: absolute
+		width: 100%
+		top: 0
+		left: 0
+		visibility: hidden
+		opacity: 0
+		border: 1px solid rgb(238, 238, 238)
+		padding: 70px 60px
+		transition: 0.3s
+		&.active
+			position: relative
+			opacity: 1
+			visibility: visible
+
+.block_assemble_modification
+	.block_select
+		display: flex
+		align-items: center
+		margin-bottom: 60px
+		.item
+			width: 100%
+			margin-right: 55px
+			>.text
+				color: rgb(8, 24, 41)
+				font-family: Montserrat
+				font-size: 16px
+				font-weight: 300
+			&:first-child
+				width: 88px
+				flex-shrink: 0
+			&:last-child
+				margin-right: 0
+
+.modification_table
+	width: 100%
+	tr
+		border-bottom: 4px solid #fff
+		td
+			padding: 0 10px
+			color: rgb(119, 134, 148)
+			font-family: Montserrat
+			font-size: 16px
+			font-weight: 300
+			line-height: 26px
+			text-align: center
+			border-right: 4px solid #fff
+			background-color: rgb(247, 249, 250)
+			height: 70px
+			.favorites, .basket
+				display: flex
+				align-items: center
+				justify-content: center
+				width: 50px
+				height: 50px
+				border: 1px solid rgb(229, 229, 229)
+				border-radius: 50%
+				transition: 0.3s
+				&:hover
+					border-color: rgb(204, 158, 74)
+					background-color: rgb(204, 158, 74)
+					.favorites_color, .basket_color
+						fill: #fff
+			&:first-child
+				text-align: left
+				padding: 0 20px
+			&:last-child
+				border-right: none
+		&:nth-child(1)
+			td
+				text-align: center
+				color: rgb(255, 255, 255)
+				font-family: Montserrat
+				font-size: 14px
+				font-weight: 300
+				line-height: 22px
+				background-color: rgb(204, 158, 74)
+		&:nth-child(2)
+			td
+				text-align: center
+				color: rgb(8, 24, 41)
+				font-family: "Playfair Display"
+				font-size: 24px
+				font-weight: 400
+				height: 55px
+				background-color: rgb(248, 241, 230)
+		&:last-child
+			border-bottom: none
+
+.block_description
+	.title
+		display: block
+		margin-bottom: 20px
+		color: rgb(8, 24, 41)
+		font-family: "Playfair Display"
+		font-size: 24px
+		font-weight: 400
+	.text
+		display: block
+		margin-bottom: 30px
+		color: rgb(8, 24, 41)
+		font-family: Montserrat
+		font-size: 16px
+		font-weight: 300
+		line-height: 26px
+
+.btn_transparent_svg
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 300px
+	height: 55px
+	border-radius: 10px
+	border: 1px solid rgb(78, 215, 191)
+	color: rgb(78, 215, 191)
+	font-family: Montserrat
+	font-size: 14px
+	font-weight: 700
+	line-height: 22px
+	text-transform: uppercase
+	letter-spacing: 1.4px
+	transition: 0.3s
+	.svg
+		margin-right: 20px
+		.color_svg
+			transition: 0.3s
+	&:hover
+		background-color: rgb(78, 215, 191)
+		text-decoration: none
+		color: rgb(255, 255, 255)
+		.svg
+			.color_svg
+				fill: rgb(255, 255, 255)
+
+.block_downloald
+	display: flex
+	justify-content: center
+	.item
+		margin-right: 60px
+		&:last-child
 			margin-right: 0
 
 @import "media1800"

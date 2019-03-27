@@ -85,6 +85,15 @@ $(document).ready(function () {
 		$(this).next().toggleClass('action');
 	});
 
+	$('.block_tab_links .tab_link a').click(function () {
+		var id = $(this).attr('href');
+		$('.block_tab_links .tab_link').removeClass('active');
+		$('.block_tab').removeClass('active');
+		$(this).parent('.tab_link').addClass('active');
+		$(id).addClass('active');
+		return false;
+	});
+
 	function drop_menu_none() {
 		if ($(window).width() < 1200) {
 			$('.drop_menu').css('display', 'none');
