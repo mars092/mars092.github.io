@@ -229,6 +229,7 @@ b, strong
 		line-height: 22px
 		text-transform: uppercase
 		letter-spacing: 1.4px
+		user-select: none
 	.mask
 		position: absolute
 		z-index: 1
@@ -690,6 +691,43 @@ b, strong
 		transform: translate(0, 0)
 		margin-bottom: 90px
 
+.block_input
+	position: relative
+	display: flex
+	.required
+		position: absolute
+		left: 0
+		top: 50%
+		transform: translate(0, -50%)
+		transition: 0.3s
+	input
+		outline: none
+		width: 100%
+		border: none
+		border-bottom: 3px solid rgb(229, 232, 236)
+		color: rgb(38, 54, 74)
+		font-family: Montserrat
+		font-size: 14px
+		font-weight: 700
+		line-height: 22px
+		text-transform: uppercase
+		transition: 0.3s
+		&:focus
+			border-color: rgb(216, 241, 237)
+		&.hidden
+			display: none
+	.label_input
+		display: block
+		width: 100%
+		border-bottom: 3px solid rgb(229, 232, 236)
+	&.active
+		.required
+			top: 0
+			transform: translate(0, 0)
+			color: rgb(78, 215, 191)
+			.svg_color
+				fill: rgb(78, 215, 191)
+
 .mocap
 	position: absolute
 	z-index: 1
@@ -1053,11 +1091,12 @@ header
 
 .breadcrumbs
 	display: flex
+	flex-wrap: wrap
 	margin: 0
 	padding: 0
 	li
 		list-style-type: none
-		margin-left: 5px
+		margin-right: 5px
 		a
 			font-family: Montserrat
 			font-size: 14px
@@ -1072,7 +1111,6 @@ header
 			color: rgb(119, 134, 148)
 			text-decoration: none
 		&:first-child
-			margin-left: 0
 			&:before
 				display: none
 		&:last-child
@@ -1513,7 +1551,7 @@ header
 	padding-top: 85px
 	padding-bottom: 150px
 
-.block_card_photos
+.block_model_card_photos
 	display: flex
 	margin-bottom: 75px
 	.block_big
@@ -1714,16 +1752,23 @@ header
 			border-bottom: none
 
 .block_description
-	.title
+	h4
 		display: block
 		margin-bottom: 20px
 		color: rgb(8, 24, 41)
 		font-family: "Playfair Display"
 		font-size: 24px
 		font-weight: 400
-	.text
+	p
 		display: block
 		margin-bottom: 30px
+		color: rgb(8, 24, 41)
+		font-family: Montserrat
+		font-size: 16px
+		font-weight: 300
+		line-height: 26px
+	span
+		display: block
 		color: rgb(8, 24, 41)
 		font-family: Montserrat
 		font-size: 16px
@@ -1765,6 +1810,357 @@ header
 		margin-right: 60px
 		&:last-child
 			margin-right: 0
+
+.block_urgent_question
+	display: flex
+	padding: 65px 60px
+	margin-bottom: 70px
+	border: 10px solid rgba(78, 215, 191, 0.2)
+	background-color: rgb(255, 255, 255)
+	.ico
+		margin-right: 60px
+	.block_text
+		margin: 0 175px 0 0
+		padding: 0
+		li
+			list-style-type: none
+			margin-bottom: 35px
+			&:last-child
+				margin-bottom: 0
+			.text
+				color: rgb(8, 24, 41)
+				font-family: Montserrat
+				font-size: 14px
+				font-weight: 700
+				text-transform: uppercase
+				letter-spacing: 1.4px
+			.link
+				color: rgb(78, 215, 191)
+				font-family: "Playfair Display"
+				font-size: 48px
+				font-weight: 400
+				line-height: 36px
+				text-transform: uppercase
+				font-variant: lining-nums
+				&:hover
+					text-decoration: none
+	.block_mocap
+		position: relative
+		img
+			position: absolute
+			width: 378px
+			bottom: -20px
+
+.block_dfw
+	display: flex
+	align-items: center
+	.item
+		margin-right: 70px
+		&:last-child
+			margin-right: 0
+		.text
+			color: rgb(8, 24, 41)
+			font-family: Montserrat
+			font-size: 14px
+			font-weight: 700
+			line-height: 26px
+			text-transform: uppercase
+			letter-spacing: 1.4px
+
+.ex
+	color: $ex
+
+.prom
+	color: $prom
+
+.street
+	color: $street
+
+.office
+	color: $office
+
+.spot
+	color: $spot
+
+.commercial
+	color: $commercial
+
+.park
+	color: $park
+
+.architect
+	color: $architect
+
+.agro
+	color: $agro
+
+.zom
+	color: $zom
+
+.block_card_photos
+	display: flex
+	margin-bottom: 70px
+	.block_img
+		width: 100%
+		margin-right: 30px
+		a
+			display: flex
+			align-items: center
+			justify-content: center
+			border: 1px solid rgb(238, 238, 238)
+			height: 550px
+			img
+				max-width: 100%
+				max-height: 100%
+	.block_info
+		width: 460px
+		flex-shrink: 0
+		.title
+			display: block
+			margin-bottom: 25px
+			color: rgb(8, 24, 41)
+			font-family: Montserrat
+			font-size: 30px
+			font-weight: 500
+			text-transform: uppercase
+		.block_downloads_link
+			margin: 0
+			padding: 0 0 45px 0
+			border-bottom: 3px solid rgb(229, 232, 236)
+			li
+				position: relative
+				list-style-type: none
+				margin-bottom: 20px
+				padding-left: 20px
+				&:last-child
+					margin-bottom: 0
+				a
+					color: rgb(8, 24, 41)
+					font-family: Montserrat
+					font-size: 16px
+					font-weight: 300
+					text-decoration: underline
+					transition: 0.3s
+					&:before
+						content: ''
+						position: absolute
+						left: 0
+						top: 6.5px
+						width: 6px
+						height: 6px
+						border-radius: 50%
+						background-color: rgb(204, 158, 74)
+						transition: 0.3s
+					&:hover
+						color: rgb(78, 215, 191)
+						&:before
+							background-color: rgb(78, 215, 191)
+
+.block_comparison_vs_favorites
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-top: 45px
+	margin-bottom: 65px
+	.item
+		a
+			display: flex
+			align-items: center
+			color: rgb(8, 24, 41)
+			font-family: Montserrat
+			font-size: 14px
+			font-weight: 700
+			text-transform: uppercase
+			letter-spacing: 1.4px
+			transition: 0.3s
+			img
+				margin-right: 14px
+			&:hover
+				color: rgb(204, 158, 74)
+				text-decoration: none
+
+.block_order_quantity
+	display: flex
+	justify-content: space-between
+	.item
+		.btn_bulk
+			width: 270px
+
+.block_quantity
+	position: relative
+	width: 160px
+	height: 73px
+	border-radius: 10px
+	border: 3px solid rgb(229, 232, 236)
+	span
+		svg
+			use
+				transition: 0.3s
+		&:hover
+			svg
+				use
+					fill: rgb(204, 158, 74)
+		&.prev
+			position: absolute
+			cursor: pointer
+			top: 50%
+			left: 20%
+			transform: translate(-50%, -50%)
+		&.next
+			position: absolute
+			cursor: pointer
+			top: 50%
+			left: 80%
+			transform: translate(-50%, -50%)
+	.numb
+		position: absolute
+		outline: none
+		top: 50%
+		left: 50%
+		width: 50px
+		transform: translate(-50%, -50%)
+		background: none
+		border: none
+		color: rgb(119, 134, 148)
+		font-family: Montserrat
+		font-size: 16px
+		font-weight: 300
+		line-height: 22px
+		text-align: center
+
+.block_specifications
+	.tabl_specifications
+		width: 100%
+		border-bottom: 1px solid rgb(238, 238, 238)
+		tr
+			&:nth-child(odd)
+				background-color: rgb(247, 249, 250)
+			td
+				padding: 20px
+				font-family: Montserrat
+				font-size: 16px
+				font-weight: 300
+				&:first-child
+					color: rgb(8, 24, 41)
+					width: 420px
+				&:last-child
+					color: rgb(119, 134, 148)
+	.btn_transparent
+		margin-top: 35px
+		width: 370px
+		height: 55px
+
+.block_favorites_basket
+	display: flex
+	flex-direction: column
+	>.item
+		display: flex
+		align-items: center
+		margin-bottom: 30px
+		border: 1px solid rgb(238, 238, 238)
+		transition: 0.3s
+		&:hover
+			border-color: rgb(239, 227, 205)
+		&:last-child
+			margin-bottom: 0
+		.img
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 200px
+			height: 170px
+			margin: 15px
+			flex-shrink: 0
+			img
+				max-width: 100%
+				max-height: 100%
+		.block_text
+			padding: 30px 0
+			width: 540px
+			flex-shrink: 0
+			.title
+				display: block
+				margin-bottom: 25px
+				color: rgb(8, 24, 41)
+				font-family: "Playfair Display"
+				font-size: 24px
+				font-weight: 400
+				text-transform: uppercase
+			.vendor_code
+				display: block
+				margin-bottom: 15px
+				color: rgb(8, 24, 41)
+				font-family: Montserrat
+				font-size: 16px
+				font-weight: 300
+			.text
+				display: block
+				color: rgb(119, 134, 148)
+				font-family: Montserrat
+				font-size: 16px
+				font-weight: 300
+				line-height: 26px
+		.block_link
+			display: flex
+			align-items: center
+			justify-content: space-evenly
+			width: 100%
+			.item
+				a
+					display: flex
+					align-items: center
+					&:hover
+						text-decoration: none
+						span
+							color: #cc9e4a
+					img
+						user-select: none
+						margin-right: 15px
+					span
+						color: rgb(8, 24, 41)
+						font-family: Montserrat
+						font-size: 14px
+						font-weight: 700
+						line-height: 22px
+						text-transform: uppercase
+						letter-spacing: 1.4px
+						transition: 0.3s
+						user-select: none
+
+.block_title2
+	.title
+		margin: 0
+		color: rgb(8, 24, 41)
+		font-family: Montserrat
+		font-size: 30px
+		font-weight: 500
+		line-height: 64px
+		text-transform: uppercase
+
+.form_basket
+	margin-top: 30px
+	.block_form_basket
+		display: flex
+		margin-bottom: 70px
+		.item
+			width: calc(50% - 30px)
+			&:first-child
+				margin-right: 60px
+			.block_input
+				margin-bottom: 30px
+				.right_mask
+					position: absolute
+					top: 50%
+					left: 100%
+					transform: translate(-100%, -50%)
+				&:last-child
+					margin-bottom: 0
+				input, .label_input
+					height: 60px
+					background: none
+
+.label_input
+	margin-bottom: 0
 
 @import "media1800"
 @import "media1600"

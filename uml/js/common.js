@@ -94,6 +94,20 @@ $(document).ready(function () {
 		return false;
 	});
 
+	$('.block_quantity .prev').click(function () {
+		var numb = $(this).parent().find('.numb').val();
+		if (+numb > 0) {
+			+numb--;
+			$(this).parent().find('.numb').val(numb);
+		}
+	});
+
+	$('.block_quantity .next').click(function () {
+		var numb = $(this).parent().find('.numb').val(); +
+		+numb++;
+		$(this).parent().find('.numb').val(numb);
+	});
+
 	function drop_menu_none() {
 		if ($(window).width() < 1200) {
 			$('.drop_menu').css('display', 'none');
