@@ -382,6 +382,7 @@ b, strong
 	font-family: Montserrat
 	font-size: 14px
 	font-weight: 700
+	text-align: center
 	text-transform: uppercase
 	letter-spacing: 1.4px
 	transition: 0.3s
@@ -675,7 +676,6 @@ b, strong
 			font-size: 14px
 			font-weight: 700
 			line-height: 22px
-			text-transform: uppercase
 			transition: 0.3s
 			&:focus
 				border-color: rgb(216, 241, 237)
@@ -710,7 +710,6 @@ b, strong
 		font-size: 14px
 		font-weight: 700
 		line-height: 22px
-		text-transform: uppercase
 		transition: 0.3s
 		&:focus
 			border-color: rgb(216, 241, 237)
@@ -997,7 +996,6 @@ b, strong
 					font-size: 14px
 					font-weight: 700
 					line-height: 22px
-					text-transform: uppercase
 					transition: 0.3s
 					&:focus
 						border-color: rgb(216, 241, 237)
@@ -1363,7 +1361,6 @@ header
 			font-size: 14px
 			font-weight: 700
 			line-height: 22px
-			text-transform: uppercase
 			transition: 0.3s
 			&:focus
 				border-color: rgb(216, 241, 237)
@@ -2035,6 +2032,8 @@ header
 		tr
 			&:nth-child(odd)
 				background-color: rgb(247, 249, 250)
+			&.hidden
+				display: none
 			td
 				padding: 20px
 				font-family: Montserrat
@@ -2158,6 +2157,15 @@ header
 				input, .label_input
 					height: 60px
 					background: none
+				.label_input
+					display: flex
+					align-items: center
+					cursor: pointer
+					z-index: 2
+					font-family: Montserrat
+					font-size: 14px
+					font-weight: 700
+
 
 .label_input
 	margin-bottom: 0

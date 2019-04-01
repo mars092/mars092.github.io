@@ -105,8 +105,6 @@
 	.section_indent7
 		padding-top: 50px
 		padding-bottom: 70px
-	.block_favorites_basket>.item .img
-		display: none
 	.block_favorites_basket>.item .block_text
 		padding-left: 15px
 	.block_quantity
@@ -129,6 +127,18 @@
 			width: 100px
 	.block_urgent_question .block_text li .link
 		font-size: 25px
+	.block_favorites_basket>.item
+		flex-wrap: wrap
+		.img
+			order: 1
+			width: 100%
+		.block_text
+			width: 65%
+		.block_link
+			width: 35%
+	.block_favorites_basket>.item .block_link .item
+		.block_quantity
+			margin-right: 5px
 
 /*==========  Mobile First  ==========*/
 

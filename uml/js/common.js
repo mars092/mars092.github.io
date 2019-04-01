@@ -54,6 +54,12 @@ $(document).ready(function () {
 		]
 	});
 
+	$('#show_all_features').click(function () {
+		$('.tabl_specifications tr').removeClass('hidden');
+		$(this).remove();
+		return false;
+	});
+
 	$('.block_input').click(function () {
 		$(this).addClass('active');
 		$(this).find('input').focus();
