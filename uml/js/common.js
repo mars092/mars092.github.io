@@ -54,6 +54,39 @@ $(document).ready(function () {
 		]
 	});
 
+	$('.slider1 .item').click(function () {
+		$('.slider1 .item').removeClass('active');
+		$(this).addClass('active');
+		var index = $(this).index();
+		$('.slider2 .items .item').removeClass('active');
+		$('.slider2 .items .item').eq(index).addClass('active');
+		return false;
+	});
+
+	$('.slider2 .arrows .next').click(function () {
+		var active_item = $('.slider1 .active').index();
+		if (active_item > 3) {
+			active_item = 0;
+		} else {
+			active_item++;
+		}
+		$('.slider1 .item').removeClass('active');
+		$('.slider1 .item').eq(active_item).addClass('active');
+		$('.slider1 .item').eq(active_item).click();
+	});
+
+	$('.slider2 .arrows .prev').click(function () {
+		var active_item = $('.slider1 .active').index();
+		if (active_item < 0) {
+			active_item = 4;
+		} else {
+			active_item--;
+		}
+		$('.slider1 .item').removeClass('active');
+		$('.slider1 .item').eq(active_item).addClass('active');
+		$('.slider1 .item').eq(active_item).click();
+	});
+
 	$('#show_all_features').click(function () {
 		$('.tabl_specifications tr').removeClass('hidden');
 		$(this).remove();
@@ -120,7 +153,6 @@ $(document).ready(function () {
 		} else {
 			$('.drop_menu').css('display', 'block');
 		}
-
 	}
 
 	function width_container() {

@@ -223,6 +223,7 @@ b, strong
 		background-color: rgb(25, 203, 172)
 		text-shadow: 1px 0 0 rgba(255, 255, 255, 0.4)
 		color: rgb(38, 54, 74)
+		text-align: center
 		font-family: "Montserrat"
 		font-size: 14px
 		font-weight: 700
@@ -242,6 +243,8 @@ b, strong
 	&:hover
 		.mask
 			bottom: 0
+	&.w300
+		width: 300px
 
 .block_slider_they_trust_us
 	display: flex
@@ -723,9 +726,9 @@ b, strong
 		.required
 			top: 0
 			transform: translate(0, 0)
-			color: rgb(78, 215, 191)
+			color: rgb(78, 215, 191) !important
 			.svg_color
-				fill: rgb(78, 215, 191)
+				fill: rgb(78, 215, 191) !important
 
 .mocap
 	position: absolute
@@ -1141,6 +1144,17 @@ header
 		font-size: 24px
 		font-weight: 400
 		line-height: 36px
+	&.white
+		.title
+			color: rgb(255, 255, 255)
+			&:before
+				background-image: url('../img/line.svg')
+
+.about_production_bg
+	background-image: url('../img/bg1.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
 
 .block_category_selection
 	display: flex
@@ -1546,6 +1560,10 @@ header
 
 .section_indent7
 	padding-top: 85px
+	padding-bottom: 150px
+
+.section_indent8
+	padding-top: 65px
 	padding-bottom: 150px
 
 .block_model_card_photos
@@ -2166,9 +2184,619 @@ header
 					font-size: 14px
 					font-weight: 700
 
-
 .label_input
 	margin-bottom: 0
+
+.main_block_text
+	p, span, li
+		color: rgb(8, 24, 41)
+		font-family: Montserrat
+		font-size: 16px
+		font-weight: 300
+		line-height: 26px
+	p, ul
+		margin-bottom: 30px
+	ul
+		padding: 0
+		counter-reset: list 0
+		li
+			list-style-type: none
+			&:before
+				counter-increment: list
+				content: counter(list) ") "
+				font-weight: 700
+				color: rgb(91, 218, 196)
+
+.wraper_bg
+	background-image: url('../img/bg-lamp.png')
+	background-repeat: no-repeat
+	background-position: 100% 0
+
+.wraper_bg2
+	background-image: url('../img/hand2.png')
+	background-repeat: no-repeat
+	background-position: 100% 0
+
+.wraper_bg3
+	background-image: url('../img/bg5.png')
+	background-repeat: no-repeat
+	background-position: 100% 0
+
+.block_qualified_staff
+	display: flex
+	margin-top: 70px
+	.item
+		margin-right: 120px
+		&:last-child
+			margin-right: 0
+		.block_text
+			width: 920px
+			padding: 50px
+			border: 10px solid rgba(78, 215, 191, 0.2)
+			span
+				display: block
+				color: rgb(8, 24, 41)
+				font-family: Montserrat
+				font-size: 16px
+				font-weight: 300
+				line-height: 26px
+				&:first-child
+					margin-bottom: 30px
+		.list_qualified_staff
+			margin: 0
+			padding: 0
+			li
+				display: flex
+				align-items: center
+				list-style-type: none
+				margin-bottom: 50px
+				&:last-child
+					margin-bottom: 0
+				.ico
+					display: flex
+					align-items: center
+					justify-content: center
+					margin-right: 30px
+					width: 80px
+					height: 75px
+				.text
+					color: rgb(8, 24, 41)
+					font-family: Montserrat
+					font-size: 16px
+					font-weight: 300
+					line-height: 26px
+
+.block_about_production
+	display: flex
+	justify-content: space-between
+	margin: 160px 0 0 0
+	padding: 0
+	counter-reset: list 0
+	li
+		position: relative
+		list-style-type: none
+		&:before
+			position: absolute
+			top: 30px
+			left: -7px
+			transform: translate(0%, -100%)
+			counter-increment: list
+			content: "0" counter(list)
+			color: rgb(204, 158, 74)
+			font-family: "Playfair Display"
+			font-size: 150px
+			line-height: 140px
+			font-weight: 400
+			background: linear-gradient(to top, rgba(204, 158, 74, 0) 0%, rgba(204, 158, 74, 0.3) 100%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+		span
+			display: block
+			&.title
+				color: rgb(204, 158, 74)
+				font-family: "Playfair Display"
+				font-size: 24px
+				font-weight: 400
+				margin-bottom: 25px
+			&.text
+				color: rgb(255, 255, 255)
+				font-family: Montserrat
+				font-size: 16px
+				font-weight: 300
+				line-height: 26px
+	&.white
+		li
+			.text
+				color: rgb(8, 24, 41)
+
+.block_current_jobs
+	margin: 0
+	padding: 0
+	li
+		position: relative
+		list-style-type: none
+		margin-bottom: 20px
+		padding-left: 20px
+		&:last-child
+			margin-bottom: 0
+		a
+			color: rgb(8, 24, 41)
+			font-family: Montserrat
+			font-size: 16px
+			font-weight: 300
+			text-decoration: underline
+			transition: 0.3s
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 6.5px
+				width: 6px
+				height: 6px
+				border-radius: 50%
+				background-color: rgb(204, 158, 74)
+				transition: 0.3s
+			&:hover
+				color: rgb(78, 215, 191)
+				&:before
+					background-color: rgb(78, 215, 191)
+
+.title_small
+	color: rgb(8, 24, 41)
+	font-family: Montserrat
+	font-size: 30px
+	font-weight: 500
+	margin-bottom: 30px
+	text-transform: uppercase
+
+.indent_top
+	margin-top: 85px
+
+.block_list_main
+	margin: 0
+	padding: 0
+	li
+		position: relative
+		list-style-type: none
+		margin-bottom: 20px
+		padding-left: 20px
+		color: rgb(8, 24, 41)
+		font-family: Montserrat
+		font-size: 16px
+		font-weight: 300
+		&:last-child
+			margin-bottom: 0
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			top: 6.5px
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			background-color: rgb(204, 158, 74)
+			transition: 0.3s
+
+.text_emeil
+	display: block
+	margin-top: 30px
+	color: rgb(8, 24, 41)
+	font-family: Montserrat
+	font-size: 16px
+	font-weight: 300
+	line-height: 26px
+	a
+		color: rgb(204, 158, 74)
+		text-decoration: underline
+		transition: 0.3s
+		&:hover
+			color: rgb(78, 215, 191)
+
+.bg2
+	background-image: url('../img/bg2.jpg')
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+
+.block_cooperation
+	display: flex
+	justify-content: space-between
+	margin-top: 80px
+	.item
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		padding: 70px 0
+		width: calc(100% / 3 - 40px)
+		background-color: rgba(255, 255, 255,.05)
+		border: 1px solid rgba(204, 158, 74, 0)
+		transition: 0.3s
+		.title
+			color: rgb(255, 255, 255)
+			font-family: Montserrat
+			font-size: 30px
+			font-weight: 500
+			line-height: 42px
+			text-transform: uppercase
+			margin-bottom: 50px
+			transition: 0.3s
+		.btn_bulk
+			width: 300px
+		&:hover
+			background-color: rgba(255, 255, 255,0)
+			border: 1px solid rgba(204, 158, 74, 0.4)
+			.title
+				color: rgb(204, 158, 74)
+
+.block_we_provide
+	display: flex
+	justify-content: space-between
+	margin-top: 80px
+	.item
+		img
+			display: block
+			margin-bottom: 60px
+		.text
+			display: block
+			color: rgb(255, 255, 255)
+			font-family: Montserrat
+			font-size: 16px
+			font-weight: 300
+			line-height: 26px
+
+.slider1
+	display: flex
+	margin-top: 80px
+	background-image: url('../img/Ellipse.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center 45px
+	.item
+		display: flex
+		flex-direction: column
+		align-items: center
+		cursor: pointer
+		width: calc(100% / 5)
+		outline: none
+		&:nth-child(1), &:nth-child(5)
+			.figure
+				margin-top: 85px
+		&:nth-child(2), &:nth-child(4)
+			.figure
+				margin-top: 20px
+		.text
+			text-align: center
+			color: rgb(119, 134, 148)
+			font-family: Montserrat
+			font-size: 14px
+			font-weight: 700
+			line-height: 25px
+			text-transform: uppercase
+			user-select: none
+			letter-spacing: 1.4px
+			transition: 0.3s
+		.figure
+			position: relative
+			width: 85px
+			height: 85px
+			margin-bottom: 25px
+			border-radius: 50%
+			box-shadow: 0 3px 20px rgba(33, 33, 33, 0.07)
+			background-color: rgb(255, 255, 255)
+			transition: 0.3s
+			.circl
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				border-radius: 50%
+				width: 55px
+				height: 55px
+				box-shadow: 0 3px 20px rgba(33, 33, 33, 0.07)
+				background-color: rgb(255, 255, 255)
+				transition: 0.3s
+				svg
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					use
+						transition: 0.3s
+		&:hover
+			text-decoration: none
+			.figure
+				background-color: rgba(78, 215, 191,.1)
+				box-shadow: none
+				.circl
+					background-color: rgb(145, 238, 222)
+					box-shadow: none
+					svg
+						use
+							fill: #fff
+			.text
+				color: rgb(78, 215, 191)
+		&.active
+			.figure
+				background-color: rgba(78, 215, 191,.25)
+				box-shadow: none
+				.circl
+					background-color: rgba(78, 215, 191,.9)
+					box-shadow: 0 2px 10px rgba(91, 218, 196, 0.5)
+					svg
+						use
+							fill: #fff
+			.text
+				color: rgb(8, 24, 41)
+
+.slider2
+	position: relative
+	margin: 0 auto
+	width: 780px
+	box-shadow: 3px 0 60px rgba(8, 24, 41, 0.1)
+	.arrows
+		.next, .prev
+			position: absolute
+			top: 50%
+			background: none
+			border: none
+			padding: 0
+			cursor: pointer
+			outline: none
+			svg
+				use
+					transition: 0.3s
+			&:hover
+				svg
+					use
+						fill: rgb(204, 158, 74)
+		.next
+			left: calc(100% + 50px)
+			transform: translate(0%, -50%)
+		.prev
+			left: -50px
+			transform: translate(-100%, -50%)
+	.items
+		.item
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0
+			visibility: hidden
+			outline: none
+			transition: 0.3s
+			.block
+				display: flex
+				align-items: center
+				padding: 0 70px
+				height: 165px
+				.ico
+					flex-shrink: 0
+					width: 120px
+				.text
+					color: rgb(8, 24, 41)
+					font-family: Montserrat
+					font-size: 16px
+					font-weight: 300
+					line-height: 26px
+			&.active
+				position: relative
+				visibility: visible
+				opacity: 1
+
+.bg3
+	background-image: url('../img/bg3.jpg')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+.block_starter_kit
+	display: flex
+	justify-content: space-between
+	width: 722px
+	.item
+		width: calc(50% - 30px)
+		.btn_bulk
+			width: 100%
+		.block_input
+			height: 69px
+			.required
+				color: rgb(119, 134, 148)
+			input
+				color: #fff
+				background-color: transparent
+			&:first-child
+				margin-bottom: 40px
+
+.mocap5
+	position: absolute
+	right: -90px
+	bottom: -120px
+
+.block_dealer_profile
+	display: flex
+	justify-content: space-between
+	margin-top: 80px
+	>.item
+		display: flex
+		flex-direction: column
+		width: calc((100% / 2) - (75px / 2))
+		.inner
+			display: flex
+			align-items: center
+			margin-bottom: 15px
+			.text
+				width: 52%
+				color: rgb(8, 24, 41)
+				font-family: Montserrat
+				font-size: 16px
+				font-weight: 300
+				line-height: 26px
+			.block_input
+				width: 48%
+				height: 69px
+				input
+					background-color: transparent
+
+.block_main_downloads
+	.title
+		display: block
+		margin-bottom: 30px
+		color: rgb(8, 24, 41)
+		font-family: Montserrat
+		font-size: 30px
+		font-weight: 500
+		text-transform: uppercase
+	.subtitle
+		display: block
+		color: rgb(119, 134, 148)
+		font-family: Montserrat
+		font-size: 16px
+		font-weight: 300
+	.main_downloads
+		display: flex
+		justify-content: space-between
+		margin-top: 45px
+		margin-bottom: 65px
+		max-width: 1375px
+		.item
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			img
+				height: 64px
+				margin-bottom: 35px
+
+.block_text_jobs
+	img
+		margin-right: 10px
+	a
+		color: rgb(204, 158, 74)
+		text-decoration: underline
+	h3
+		margin-bottom: 30px
+		color: rgb(8, 24, 41)
+		font-family: Montserrat
+		font-size: 30px
+		font-weight: 500
+		line-height: 64px
+		text-transform: uppercase
+	p
+		margin-bottom: 65px
+		color: rgb(8, 24, 41)
+		font-family: Montserrat
+		font-size: 16px
+		font-weight: 300
+		line-height: 26px
+	ul
+		margin: 0 0 65px 0
+		padding: 0
+		li
+			position: relative
+			list-style-type: none
+			margin-bottom: 20px
+			padding-left: 20px
+			color: rgb(8, 24, 41)
+			font-family: Montserrat
+			font-size: 16px
+			font-weight: 300
+			line-height: 26px
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 6.5px
+				width: 6px
+				height: 6px
+				border-radius: 50%
+				background-color: #cc9e4a
+			&:last-child
+				margin-bottom: 0px
+
+.block_main_contacts
+	display: flex
+	justify-content: space-between
+	margin-bottom: 65px
+	.item
+		.row_text
+			display: block
+			margin-bottom: 35px
+			font-family: Montserrat
+			font-size: 16px
+			font-weight: 300
+			line-height: 26px
+			&:last-child
+				margin-bottom: 0
+			&.mb60
+				margin-bottom: 60px
+			.title
+				color: rgb(8, 24, 41)
+			.text
+				color: rgb(119, 134, 148)
+			a
+				color: rgb(204, 158, 74)
+				text-decoration: underline
+
+.block_maps
+	.title
+		display: block
+		margin-bottom: 45px
+		color: rgb(8, 24, 41)
+		font-family: Montserrat
+		font-size: 30px
+		font-weight: 500
+		text-transform: uppercase
+
+.select_map
+	width: 360px
+	margin-bottom: 50px
+
+.map
+	height: 600px
+
+.block_select_map
+	height: 600px
+	margin-bottom: 70px
+
+.select_firm
+	display: flex
+	flex-direction: column
+	.item
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 35px 60px
+		border: 1px solid rgb(238, 238, 238)
+		margin-bottom: 30px
+		transition: 0.3s
+		&:last-child
+			margin-bottom: 0
+		&:hover
+			border: 1px solid rgb(239, 227, 205)
+		.block_text
+			.row_span
+				display: block
+				span
+					font-family: Montserrat
+					font-size: 16px
+					font-weight: 300
+					line-height: 26px
+				.black
+					color: rgb(8, 24, 41)
+				.grey
+					color: rgb(119, 134, 148)
+				a
+					color: rgb(204, 158, 74)
+					text-decoration: underline
+			.title
+				display: block
+				margin-bottom: 25px
+				color: rgb(8, 24, 41)
+				font-family: "Playfair Display"
+				font-size: 24px
+				font-weight: 400
+				text-transform: uppercase
+			
 
 @import "media1800"
 @import "media1600"
