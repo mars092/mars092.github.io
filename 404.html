@@ -10,7 +10,8 @@
         window.location.pathname +
         window.location.search +
         window.location.hash;
-      window.location.replace("#/" + path);
+      console.log(path);
+      window.location.replace("/#" + path);
 
       // if (!window.location.hash) {
       //   var path = window.location.pathname + window.location.search;
